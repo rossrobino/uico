@@ -9,7 +9,6 @@
 	font-size: theme("fontSize.sm");
 	line-height: theme("lineHeight.5");
 	letter-spacing: theme("letterSpacing.wide");
-	text-transform: capitalize;
 }
 
 .button:hover {
