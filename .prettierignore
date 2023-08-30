@@ -7,3 +7,4 @@ node_modules
 !.env.example
 site/styles/output.css
 package-lock.json
+.vercel

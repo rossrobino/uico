@@ -1,0 +1,4 @@
+.label {
+	font-size: theme("fontSize.sm");
+	line-height: theme("lineHeight.none");
+}
