@@ -1,0 +1,30 @@
+{
+	"name": "layercomp",
+	"version": "0.0.1",
+	"description": "Component layer for TailwindCSS projects",
+	"main": "index.css",
+	"type": "module",
+	"scripts": {
+		"dev": "tailwindcss -i ./site/styles/input.css -o ./site/styles/output.css --watch --minify",
+		"format": "prettier --write . --plugin=prettier-plugin-tailwindcss --plugin=prettier-plugin-css-order",
+		"pub": "npm publish --access public"
+	},
+	"keywords": [
+		"css",
+		"components",
+		"tailwindcss"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Ross Robino",
+		"url": "https://robino.dev"
+	},
+	"repository": "github:rossrobino/layercomp",
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.9",
+		"prettier": "^3.0.3",
+		"prettier-plugin-css-order": "^2.0.0",
+		"prettier-plugin-tailwindcss": "^0.5.3",
+		"tailwindcss": "^3.3.3"
+	}
+}

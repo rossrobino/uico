@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="styles/output.css" rel="stylesheet" />
+	</head>
+	<body
+		class="dark:dark prose prose-neutral m-4 bg-background text-foreground dark:prose-invert"
+	>
+		<div>
+			<h1>CSS Components</h1>
+
+			<ul>
+				<li>
+					<a
+						href="https://github.com/rossrobino/drab/blob/main/src/routes/css/+page.svelte"
+					>
+						Source
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://github.com/rossrobino/drab/blob/main/src/app.postcss"
+					>
+						Stylesheet
+					</a>
+				</li>
+			</ul>
+
+			<p>
+				These components are built with CSS and a single HTML Element. These are
+				used to create the documentation, and are not included in the package.
+				The stylesheet can be copied and used as a starting point for a
+				TailwindCSS project.
+			</p>
+
+			<section>
+				<h2>Link</h2>
+				<a href="/styles" class="link">Link</a>
+			</section>
+
+			<section>
+				<h2>Button</h2>
+				<div class="grid grid-cols-2 gap-4">
+					<button class="button button-primary">Primary</button>
+					<button class="button button-secondary">Secondary</button>
+					<button class="button button-ghost">Ghost</button>
+					<button class="button button-destructive">Destructive</button>
+					<button class="button button-primary" disabled>Disabled</button>
+				</div>
+			</section>
+
+			<section>
+				<h2>Input / Label</h2>
+				<div class="grid grid-cols-2 gap-4">
+					<div>
+						<label for="textInput" class="label">Text</label>
+						<input type="text" id="textInput" class="input" />
+					</div>
+					<div>
+						<label for="fileInput" class="label">File</label>
+						<input type="file" id="fileInput" class="input" />
+					</div>
+					<div>
+						<label for="dateInput" class="label">Date</label>
+						<input type="date" id="dateInput" class="input" />
+					</div>
+					<div>
+						<label for="timeInput" class="label">Time</label>
+						<input type="time" id="timeInput" class="input" />
+					</div>
+					<div>
+						<label for="numberInput" class="label">Number</label>
+						<input type="number" id="numberInput" class="input" />
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Checkbox / Radio</h2>
+				<div class="mb-4 flex items-center gap-2">
+					<input type="checkbox" class="checkbox-radio" id="checkbox" />
+					<label for="checkbox" class="label">Checkbox</label>
+				</div>
+				<div class="mb-2 flex items-center gap-2">
+					<input type="radio" class="checkbox-radio" id="radio1" name="radio" />
+					<label for="radio1" class="label">Radio 1</label>
+				</div>
+				<div class="flex items-center gap-2">
+					<input type="radio" class="checkbox-radio" id="radio2" name="radio" />
+					<label for="radio2" class="label">Radio 2</label>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
