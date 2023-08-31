@@ -21,7 +21,7 @@
 
 .button:active {
 	transform: scale(theme("scale.95"));
-	box-shadow: theme("boxShadow.none");
+	box-shadow: none;
 }
 
 .button:disabled {

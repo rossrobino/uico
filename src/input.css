@@ -12,7 +12,7 @@
 }
 
 .input::placeholder {
-	opacity: theme("opacity.70");
+	opacity: theme("opacity.50");
 }
 
 .input:disabled {
@@ -39,12 +39,17 @@ input.input[type="radio"] {
 	height: theme("height.4");
 }
 
+input.input[type="color"] {
+	border-width: 0;
+	padding: 0;
+}
+
 input.input[type="range"] {
 	cursor: pointer;
 	border: none;
 	background: transparent;
-	padding-right: theme("padding.0");
-	padding-left: theme("padding.0");
+	padding-right: 0;
+	padding-left: 0;
 }
 
 input.input[type="range"]::-webkit-slider-thumb {
@@ -79,11 +84,10 @@ input.input[type="range"]::-moz-range-track {
 }
 
 input.input[type="file"]::file-selector-button {
-	margin: theme("margin.0");
-	border-width: theme("borderWidth.0");
-	background-color: inherit;
-	padding: theme("padding.0") theme("padding.2") theme("padding.0")
-		theme("padding.0");
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	padding: 0 theme("padding.2") 0 0;
 	color: inherit;
 	font-weight: theme("fontWeight.medium");
 	font-size: inherit;

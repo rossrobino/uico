@@ -1,4 +1,5 @@
 .label {
+	font-weight: theme("fontWeight.medium");
 	font-size: theme("fontSize.sm");
 	line-height: theme("lineHeight.none");
 }

@@ -3,134 +3,167 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 		<link href="styles/output.css" rel="stylesheet" />
 		<title>layercomp</title>
 		<meta name="description" content="CSS components" />
 	</head>
 	<body
-		class="dark:dark prose-a:link prose prose-neutral m-4 mb-16 bg-background text-foreground dark:prose-invert"
+		class="dark:dark m-6 mb-16 flex justify-center bg-background text-foreground"
 	>
-		<h1>layercomp</h1>
+		<div class="prose-a:link prose prose-zinc w-full dark:prose-invert">
+			<!-- README -->
+			<h1>layercomp</h1>
+			<h2>A layer of components for TailwindCSS projects</h2>
+			<p><a href="https://github.com/rossrobino/layercomp">GitHub</a></p>
+			<p>
+				These components are built with CSS and a single HTML Element. Copy and
+				paste the styles or install and import into a stylesheet to get started.
+			</p>
+			<p>
+				Check out <a href="https://ui.shadcn.com/">shadcn/ui</a> to see the
+				styles these components are based on.
+			</p>
+			<h2>Configure Tailwind</h2>
+			<ul>
+				<li>
+					<a
+						href="https://github.com/rossrobino/layercomp/blob/main/tailwind.config.js"
+						>tailwind.config.js</a
+					>
+				</li>
+				<li>
+					<a
+						href="https://github.com/rossrobino/layercomp/blob/main/site/styles/styles.css"
+						>styles.css</a
+					>
+				</li>
+			</ul>
+			<h2>Install</h2>
+			<pre><code class="language-bash">npm i -D layercomp
+</code></pre>
+			<h3>Everything</h3>
+			<pre><code class="language-bash">@import url(&quot;layercomp&quot;) layer(components);
+</code></pre>
+			<h3>Take what you need</h3>
+			<pre><code class="language-bash">@import url(&quot;layercomp/input&quot;) layer(components);
+</code></pre>
+			<!-- README -->
+			<section>
+				<h2>.link</h2>
+				<a href="" class="link">Link</a>
+			</section>
 
-		<a href="https://github.com/rossrobino/layercomp">GitHub</a>
+			<section>
+				<h2>.button</h2>
+				<div class="grid grid-cols-2 gap-4">
+					<button class="button button-primary">Primary</button>
+					<button class="button button-secondary">Secondary</button>
+					<button class="button button-ghost">Ghost</button>
+					<button class="button button-destructive">Destructive</button>
+					<button class="button button-primary" disabled>Disabled</button>
+				</div>
+			</section>
 
-		<p>
-			These components are built with CSS and a single HTML Element. Copy the
-			styles or import into a stylesheet to get started. Check out
-			<a href="https://ui.shadcn.com">shadcn/ui</a>
-			to see the styles these components are based on.
-		</p>
-
-		<section>
-			<h2>.link</h2>
-			<a href="" class="link">Link</a>
-		</section>
-
-		<section>
-			<h2>.button</h2>
-			<div class="grid grid-cols-2 gap-4">
-				<button class="button button-primary">Primary</button>
-				<button class="button button-secondary">Secondary</button>
-				<button class="button button-ghost">Ghost</button>
-				<button class="button button-destructive">Destructive</button>
-				<button class="button button-primary" disabled>Disabled</button>
-			</div>
-		</section>
-
-		<section>
-			<h2>.input / .label</h2>
-			<div class="mb-4 grid grid-cols-2 gap-4">
-				<div>
-					<label for="textInput" class="label">Text</label>
-					<input type="text" id="textInput" class="input" />
+			<section>
+				<h2>.input / .label</h2>
+				<div class="mb-8 grid grid-cols-2 gap-4">
+					<div>
+						<label for="textInput" class="label">Text</label>
+						<input type="text" id="textInput" class="input" />
+					</div>
+					<div>
+						<label for="passwordInput" class="label">Password</label>
+						<input type="password" id="passwordInput" class="input" />
+					</div>
+					<div>
+						<label for="emailInput" class="label">Email</label>
+						<input type="email" id="emailInput" class="input" />
+					</div>
+					<div>
+						<label for="urlInput" class="label">URL</label>
+						<input type="url" id="urlInput" class="input" />
+					</div>
+					<div>
+						<label for="searchInput" class="label">Search</label>
+						<input type="search" id="searchInput" class="input" />
+					</div>
+					<div>
+						<label for="fileInput" class="label">File</label>
+						<input type="file" id="fileInput" class="input" />
+					</div>
+					<div>
+						<label for="dateInput" class="label">Date</label>
+						<input type="date" id="dateInput" class="input" />
+					</div>
+					<div>
+						<label for="datetime-localInput" class="label">
+							Date Time - Local
+						</label>
+						<input
+							type="datetime-local"
+							id="datetime-localInput"
+							class="input"
+						/>
+					</div>
+					<div>
+						<label for="monthInput" class="label">Month</label>
+						<input type="month" id="monthInput" class="input" />
+					</div>
+					<div>
+						<label for="weekInput" class="label">Week</label>
+						<input type="week" id="weekInput" class="input" />
+					</div>
+					<div>
+						<label for="timeInput" class="label">Time</label>
+						<input type="time" id="timeInput" class="input" />
+					</div>
+					<div>
+						<label for="numberInput" class="label">Number</label>
+						<input type="number" id="numberInput" class="input" />
+					</div>
+					<div>
+						<label for="telInput" class="label">Tel</label>
+						<input type="tel" id="telInput" class="input" />
+					</div>
+					<div>
+						<label for="colorInput" class="label">Color</label>
+						<input type="color" id="colorInput" class="input" />
+					</div>
 				</div>
-				<div>
-					<label for="passwordInput" class="label">Password</label>
-					<input type="password" id="passwordInput" class="input" />
+				<div class="mb-8">
+					<div class="flex items-center gap-1">
+						<input type="checkbox" class="input" id="checkbox" />
+						<label for="checkbox" class="label">Checkbox</label>
+					</div>
 				</div>
-				<div>
-					<label for="emailInput" class="label">Email</label>
-					<input type="email" id="emailInput" class="input" />
+				<div class="mb-8">
+					<div class="mb-2 flex items-center gap-1">
+						<input type="radio" class="input" id="radio1" name="radio" />
+						<label for="radio1" class="label">Radio 1</label>
+					</div>
+					<div class="mb-2 flex items-center gap-1">
+						<input type="radio" class="input" id="radio2" name="radio" />
+						<label for="radio2" class="label">Radio 2</label>
+					</div>
+					<div class="flex items-center gap-1">
+						<input type="radio" class="input" id="radio3" name="radio" />
+						<label for="radio3" class="label">Radio 3</label>
+					</div>
 				</div>
-				<div>
-					<label for="urlInput" class="label">URL</label>
-					<input type="url" id="urlInput" class="input" />
+				<div class="mb-4">
+					<label for="range" class="label">Range</label>
+					<input type="range" id="range" class="input" />
 				</div>
-				<div>
-					<label for="searchInput" class="label">Search</label>
-					<input type="search" id="searchInput" class="input" />
+				<div class="mb-4">
+					<label for="select" class="label">Select</label>
+					<select class="input" id="select">
+						<option value="option1">Option 1</option>
+						<option value="option2">Option 2</option>
+						<option value="option3">Option 3</option>
+					</select>
 				</div>
-				<div>
-					<label for="fileInput" class="label">File</label>
-					<input type="file" id="fileInput" class="input" />
-				</div>
-				<div>
-					<label for="dateInput" class="label">Date</label>
-					<input type="date" id="dateInput" class="input" />
-				</div>
-				<div>
-					<label for="datetime-localInput" class="label">
-						Date Time - Local
-					</label>
-					<input type="datetime-local" id="datetime-localInput" class="input" />
-				</div>
-				<div>
-					<label for="monthInput" class="label">Month</label>
-					<input type="month" id="monthInput" class="input" />
-				</div>
-				<div>
-					<label for="weekInput" class="label">Week</label>
-					<input type="week" id="weekInput" class="input" />
-				</div>
-				<div>
-					<label for="timeInput" class="label">Time</label>
-					<input type="time" id="timeInput" class="input" />
-				</div>
-				<div>
-					<label for="numberInput" class="label">Number</label>
-					<input type="number" id="numberInput" class="input" />
-				</div>
-				<div>
-					<label for="telInput" class="label">Tel</label>
-					<input type="tel" id="telInput" class="input" />
-				</div>
-				<div>
-					<label for="colorInput" class="label">Color</label>
-					<input type="color" id="colorInput" class="input" />
-				</div>
-			</div>
-			<div class="mb-4">
-				<div class="flex items-center gap-1">
-					<input type="checkbox" class="input" id="checkbox" />
-					<label for="checkbox" class="label">Checkbox</label>
-				</div>
-			</div>
-			<div class="mb-4">
-				<div class="mb-2 flex items-center gap-1">
-					<input type="radio" class="input" id="radio1" name="radio" />
-					<label for="radio1" class="label">Radio 1</label>
-				</div>
-				<div class="mb-2 flex items-center gap-1">
-					<input type="radio" class="input" id="radio2" name="radio" />
-					<label for="radio2" class="label">Radio 2</label>
-				</div>
-				<div class="flex items-center gap-1">
-					<input type="radio" class="input" id="radio3" name="radio" />
-					<label for="radio3" class="label">Radio 3</label>
-				</div>
-			</div>
-			<div class="mb-4">
-				<label for="range" class="label">Range</label>
-				<input type="range" id="range" class="input" />
-			</div>
-			<div class="mb-4">
-				<label for="select" class="label">Select</label>
-				<select class="input" id="select">
-					<option value="option1">Option 1</option>
-					<option value="option2">Option 2</option>
-					<option value="option3">Option 3</option>
-				</select>
-			</div>
-		</section>
+			</section>
+		</div>
 	</body>
 </html>
