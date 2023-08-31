@@ -2,18 +2,10 @@
 	cursor: pointer;
 	color: theme("colors.primary.DEFAULT");
 	text-decoration: underline;
-	text-decoration-thickness: theme("textDecorationThickness.2");
 	text-underline-offset: theme("textUnderlineOffset.2");
 }
 
-.link:hover,
-.link:focus {
-	text-decoration-style: dotted;
-}
-
 .link:focus-visible {
-	outline-color: theme("outlineColor.foreground");
-	outline-style: solid;
-	outline-width: theme("outlineWidth.2");
+	outline: theme("outlineColor.foreground") solid theme("outlineWidth.2");
 	outline-offset: theme("outlineOffset.2");
 }

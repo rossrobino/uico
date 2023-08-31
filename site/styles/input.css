@@ -1,4 +1,4 @@
-@import url("../../index.css") layer(components);
+@import url("../../src/all.css") layer(components);
 
 @tailwind base;
 @tailwind components;

@@ -1,44 +1,91 @@
 .input {
 	display: flex;
-	border-width: theme("borderWidth.DEFAULT");
-	border-color: theme("borderColor.DEFAULT");
+	border: theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT");
 	border-radius: theme("borderRadius.DEFAULT");
 	background-color: theme("backgroundColor.background");
 	padding: theme("padding.2") theme("padding.3");
 	width: theme("width.full");
+	height: theme("height.10");
+	accent-color: theme("accentColor.primary.DEFAULT");
 	font-size: theme("fontSize.sm");
 	line-height: theme("lineHeight.5");
-}
-
-.input::file-selector-button {
-	border-width: theme("borderWidth.0");
-	background-color: inherit;
-	color: inherit;
-	font-size: inherit;
-	line-height: theme("lineHeight.none");
 }
 
 .input::placeholder {
 	opacity: theme("opacity.70");
 }
 
-.checkbox-radio {
-	border-width: theme("borderWidth.DEFAULT");
-	width: theme("width.4");
-	height: theme("height.4");
-	accent-color: theme("accentColor.primary.DEFAULT");
-}
-
-.input:disabled,
-.checkbox-radio:disabled {
+.input:disabled {
 	opacity: theme("opacity.50");
 	cursor: not-allowed;
 }
 
-.input:focus-visible,
-.checkbox-radio:focus-visible {
-	outline-color: theme("outlineColor.foreground");
-	outline-style: solid;
-	outline-width: theme("outlineWidth.2");
+.input:focus-visible {
+	outline: theme("outlineColor.foreground") solid theme("outlineWidth.2");
 	outline-offset: theme("outlineOffset.2");
+}
+
+input.input:not([type="checkbox"]):not([type="radio"]),
+select.input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input.input[type="checkbox"],
+input.input[type="radio"] {
+	aspect-ratio: theme("aspectRatio.square");
+	width: theme("width.5");
+	height: theme("height.4");
+}
+
+input.input[type="range"] {
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	padding-right: theme("padding.0");
+	padding-left: theme("padding.0");
+}
+
+input.input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	margin-top: -0.375rem;
+	border: theme("borderWidth.2") solid theme("borderColor.primary.DEFAULT");
+	border-radius: theme("borderRadius.full");
+	background: theme("backgroundColor.primary.foreground");
+	width: theme("width.5");
+	height: theme("height.5");
+}
+
+input.input[type="range"]::-moz-range-thumb {
+	margin-top: -0.375rem;
+	border: theme("borderWidth.2") solid theme("borderColor.primary.DEFAULT");
+	border-radius: theme("borderRadius.full");
+	background: theme("backgroundColor.primary.foreground");
+	width: theme("width.5");
+	height: theme("height.5");
+}
+
+input.input[type="range"]::-webkit-slider-runnable-track {
+	border-radius: theme("borderRadius.full");
+	background: theme("backgroundColor.primary.DEFAULT");
+	height: theme("height.2");
+}
+
+input.input[type="range"]::-moz-range-track {
+	border-radius: theme("borderRadius.full");
+	background: theme("backgroundColor.primary.DEFAULT");
+	height: theme("height.2");
+}
+
+input.input[type="file"]::file-selector-button {
+	margin: theme("margin.0");
+	border-width: theme("borderWidth.0");
+	background-color: inherit;
+	padding: theme("padding.0") theme("padding.2") theme("padding.0")
+		theme("padding.0");
+	color: inherit;
+	font-weight: theme("fontWeight.medium");
+	font-size: inherit;
+	line-height: inherit;
 }

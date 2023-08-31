@@ -1,9 +1,18 @@
 {
 	"name": "layercomp",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"description": "Component layer for TailwindCSS projects",
-	"main": "index.css",
 	"type": "module",
+	"exports": {
+		".": "./src/all.css",
+		"./button": "./src/button.css",
+		"./input": "./src/input.css",
+		"./label": "./src/label.css",
+		"./link": "./src/link.css"
+	},
+	"files": [
+		"src"
+	],
 	"scripts": {
 		"dev": "tailwindcss -i ./site/styles/input.css -o ./site/styles/output.css --watch --minify",
 		"build": "tailwindcss -i ./site/styles/input.css -o ./site/styles/output.css --minify",

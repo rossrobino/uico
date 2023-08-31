@@ -1,10 +1,14 @@
 .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition-duration: theme("transitionDuration.DEFAULT");
 	transition-property: theme("transitionProperty.DEFAULT");
 	transition-timing-function: theme("transitionTimingFunction.DEFAULT");
 	box-shadow: theme("boxShadow.DEFAULT");
 	border-radius: theme("borderRadius.DEFAULT");
 	padding: theme("padding.2") theme("padding.3");
+	height: theme("height.10");
 	font-weight: theme("fontWeight.medium");
 	font-size: theme("fontSize.sm");
 	line-height: theme("lineHeight.5");
@@ -54,8 +58,6 @@
 }
 
 .button:focus-visible {
-	outline-color: theme("outlineColor.foreground");
-	outline-style: solid;
-	outline-width: theme("outlineWidth.2");
+	outline: theme("outlineColor.foreground") solid theme("outlineWidth.2");
 	outline-offset: theme("outlineOffset.2");
 }
