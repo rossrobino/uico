@@ -1,16 +1,15 @@
 import plugin from "tailwindcss/plugin.js";
+import type { CSSRuleObject } from "tailwindcss/types/config.js";
 
 export default plugin(({ addComponents, theme }) => {
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
-	const focusVisible = {
+	const focusVisible: CSSRuleObject = {
 		"&:focus-visible": {
 			outline: 'theme("outlineColor.foreground") solid theme("outlineWidth.2")',
 			"outline-offset": theme("outlineOffset.2"),
 		},
 	};
 
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject[]} */
-	const button = [
+	const button: CSSRuleObject[] = [
 		{
 			".button": {
 				display: "flex",
@@ -73,8 +72,7 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	];
 
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject[]} */
-	const input = [
+	const input: CSSRuleObject[] = [
 		{
 			".input": {
 				display: "flex",
@@ -175,8 +173,7 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	];
 
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject[]} */
-	const label = [
+	const label: CSSRuleObject[] = [
 		{
 			".label": {
 				"font-weight": theme("fontWeight.medium"),
@@ -186,8 +183,7 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	];
 
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject[]} */
-	const link = [
+	const link: CSSRuleObject[] = [
 		{
 			".link": {
 				cursor: "pointer",

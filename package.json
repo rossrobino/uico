@@ -1,42 +1,71 @@
 {
 	"name": "layercomp",
-	"version": "0.0.7",
-	"description": "Component layer for TailwindCSS projects",
-	"type": "module",
-	"exports": {
-		".": "./src/index.js"
-	},
-	"files": [
-		"src"
-	],
-	"scripts": {
-		"dev": "npm run doc && tailwindcss -i ./site/styles/styles.css -o ./site/styles/output.css --watch --minify",
-		"build": "npm run doc && tailwindcss -i ./site/styles/styles.css -o ./site/styles/output.css --minify",
-		"doc": "node scripts/doc.js && npm run format",
-		"format": "prettier --write . --plugin=prettier-plugin-tailwindcss --plugin=prettier-plugin-css-order",
-		"pub": "npm publish --access public"
-	},
+	"version": "0.0.12",
+	"description": "A layer of components for TailwindCSS projects",
 	"keywords": [
-		"css",
-		"components",
-		"tailwindcss"
+		"CSS",
+		"TailwindCSS",
+		"components"
 	],
+	"homepage": "https://layercomp.robino.dev",
 	"license": "MIT",
 	"author": {
 		"name": "Ross Robino",
 		"url": "https://robino.dev"
 	},
 	"repository": "github:rossrobino/layercomp",
-	"peerDependencies": {
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"scripts": {
+		"dev": "vite dev",
+		"build": "npm run doc && vite build && npm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepublishOnly": "npm run package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"pub": "npm publish --access public",
+		"doc": "node src/scripts/copyReadMe.js"
+	},
+	"dependencies": {
 		"tailwindcss": "^3.3.3"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-vercel": "^3.0.3",
+		"@sveltejs/kit": "^1.24.0",
+		"@sveltejs/package": "^2.2.2",
 		"@tailwindcss/typography": "^0.5.9",
-		"@tsconfig/node20": "^20.1.2",
 		"@types/node": "^20.5.7",
+		"@typescript-eslint/eslint-plugin": "^6.5.0",
+		"@typescript-eslint/parser": "^6.5.0",
+		"autoprefixer": "^10.4.15",
+		"eslint": "^8.48.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-svelte": "^2.33.0",
 		"marked": "^7.0.5",
+		"postcss": "^8.4.29",
 		"prettier": "^3.0.3",
-		"prettier-plugin-tailwindcss": "^0.5.3",
-		"typescript": "^5.2.2"
+		"prettier-plugin-svelte": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.4",
+		"publint": "^0.2.2",
+		"svelte": "^4.2.0",
+		"svelte-check": "^3.5.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9"
 	}
 }
