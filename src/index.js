@@ -96,7 +96,7 @@ export default plugin(({ addComponents, theme }) => {
 			},
 		},
 		{
-			'input.input:not([type="checkbox"]):not([type="radio"]), select.input, textarea.input':
+			'input:not([type="checkbox"]):not([type="radio"]).input, select.input, textarea.input':
 				{
 					"-webkit-appearance": "none",
 					"-moz-appearance": "none",
@@ -104,20 +104,20 @@ export default plugin(({ addComponents, theme }) => {
 				},
 		},
 		{
-			'input.input[type="checkbox"], input.input[type="radio"]': {
+			'input[type="checkbox"].input, input[type="radio"].input': {
 				"aspect-ratio": theme("aspectRatio.square"),
 				width: theme("width.5"),
 				height: theme("height.4"),
 			},
 		},
 		{
-			'input.input[type="color"]': {
+			'input[type="color"].input': {
 				"border-width": "0",
 				padding: "0",
 			},
 		},
 		{
-			'input.input[type="file"]': {
+			'input[type="file"].input': {
 				"&::file-selector-button": {
 					margin: "0",
 					border: "none",
@@ -131,7 +131,7 @@ export default plugin(({ addComponents, theme }) => {
 			},
 		},
 		{
-			'input.input[type="range"]': {
+			'input[type="range"].input': {
 				cursor: "pointer",
 				border: "none",
 				background: "transparent",
@@ -166,6 +166,11 @@ export default plugin(({ addComponents, theme }) => {
 					background: theme("backgroundColor.primary.DEFAULT"),
 					height: theme("height.2"),
 				},
+			},
+		},
+		{
+			"select[multiple].input, textarea.input": {
+				height: theme("height.20"),
 			},
 		},
 	];
