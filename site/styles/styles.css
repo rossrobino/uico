@@ -1,6 +1,3 @@
-/* use "layercomp" instead of this relative import */
-@import url("../../src/all.css") layer(components);
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 		<link href="styles/output.css" rel="stylesheet" />
@@ -11,20 +11,30 @@
 	<body
 		class="dark:dark m-6 mb-16 flex justify-center bg-background text-foreground"
 	>
-		<div class="prose-a:link prose prose-zinc w-full dark:prose-invert">
+		<div class="prose prose-zinc w-full prose-a:link dark:prose-invert">
 			<!-- README -->
 			<h1>layercomp</h1>
 			<h2>A layer of components for TailwindCSS projects</h2>
 			<p><a href="https://github.com/rossrobino/layercomp">GitHub</a></p>
 			<p>
-				These components are built with CSS and a single HTML Element. Copy and
-				paste the styles or install and import into a stylesheet to get started.
+				These components are built with CSS and a single HTML Element.
+				<strong>layercomp</strong> is a TailwindCSS plugin, it works wherever
+				Tailwind does.
 			</p>
 			<p>
 				Check out <a href="https://ui.shadcn.com/">shadcn/ui</a> to see the
 				styles these components are based on.
 			</p>
+			<h2>Install</h2>
+			<pre><code class="language-bash">npm i -D layercomp
+</code></pre>
 			<h2>Configure Tailwind</h2>
+			<p>
+				This plugin does not supply colors but expects certain colors to be
+				configured in your <code>theme</code>. Utilizing custom properties makes
+				accomplishing different themes simpler, you can also set the theme
+				directly in your <code>tailwind.config.js</code> instead.
+			</p>
 			<ul>
 				<li>
 					<a
@@ -39,19 +49,10 @@
 					>
 				</li>
 			</ul>
-			<h2>Install</h2>
-			<pre><code class="language-bash">npm i -D layercomp
-</code></pre>
-			<h3>Everything</h3>
-			<pre><code class="language-bash">@import url(&quot;layercomp&quot;) layer(components);
-</code></pre>
-			<h3>Take what you need</h3>
-			<pre><code class="language-bash">@import url(&quot;layercomp/input&quot;) layer(components);
-</code></pre>
 			<!-- README -->
 			<section>
 				<h2>.link</h2>
-				<a href="" class="link">Link</a>
+				<a href="https://robino.dev" class="link">robino.dev</a>
 			</section>
 
 			<section>
@@ -70,7 +71,12 @@
 				<div class="mb-8 grid grid-cols-2 gap-4">
 					<div>
 						<label for="textInput" class="label">Text</label>
-						<input type="text" id="textInput" class="input" />
+						<input
+							type="text"
+							id="textInput"
+							class="input"
+							placeholder="Placeholder"
+						/>
 					</div>
 					<div>
 						<label for="passwordInput" class="label">Password</label>

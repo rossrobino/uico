@@ -1,8 +1,11 @@
 import typography from "@tailwindcss/typography";
 
+// import from "layercomp" instead of relative import
+import layercomp from "./src/index.js";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ["./site/**/*.{html,js}"],
+	content: ["./site/**/*.{html,js}"], // edit based on your project
 	theme: {
 		extend: {
 			borderColor: {
@@ -37,5 +40,5 @@ export default {
 			},
 		},
 	},
-	plugins: [typography],
+	plugins: [typography, layercomp],
 };

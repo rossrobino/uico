@@ -4,14 +4,9 @@
 
 [GitHub](https://github.com/rossrobino/layercomp)
 
-These components are built with CSS and a single HTML Element. Copy and paste the styles or install and import into a stylesheet to get started.
+These components are built with CSS and a single HTML Element. **layercomp** is a TailwindCSS plugin, it works wherever Tailwind does.
 
 Check out [shadcn/ui](https://ui.shadcn.com/) to see the styles these components are based on.
-
-## Configure Tailwind
-
-- [tailwind.config.js](https://github.com/rossrobino/layercomp/blob/main/tailwind.config.js)
-- [styles.css](https://github.com/rossrobino/layercomp/blob/main/site/styles/styles.css)
 
 ## Install
 
@@ -19,14 +14,9 @@ Check out [shadcn/ui](https://ui.shadcn.com/) to see the styles these components
 npm i -D layercomp
 ```
 
-### Everything
+## Configure Tailwind
 
-```bash
-@import url("layercomp") layer(components);
-```
+This plugin does not supply colors but expects certain colors to be configured in your `theme`. Utilizing custom properties makes accomplishing different themes simpler, you can also set the theme directly in your `tailwind.config.js` instead.
 
-### Take what you need
-
-```bash
-@import url("layercomp/input") layer(components);
-```
+- [tailwind.config.js](https://github.com/rossrobino/layercomp/blob/main/tailwind.config.js)
+- [styles.css](https://github.com/rossrobino/layercomp/blob/main/site/styles/styles.css)
