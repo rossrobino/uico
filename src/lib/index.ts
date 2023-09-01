@@ -2,10 +2,32 @@ import plugin from "tailwindcss/plugin.js";
 import type { CSSRuleObject } from "tailwindcss/types/config.js";
 
 export default plugin(({ addComponents, theme }) => {
+	const border =
+		'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
+
 	const focusVisible: CSSRuleObject = {
-		"&:focus-visible": {
-			outline: 'theme("outlineColor.foreground") solid theme("outlineWidth.2")',
-			"outline-offset": theme("outlineOffset.2"),
+		outline: 'theme("outlineColor.foreground") solid theme("outlineWidth.2")',
+		"outline-offset": theme("outlineOffset.2"),
+	};
+
+	const badge: CSSRuleObject = {
+		".badge": {
+			"font-size": theme("fontSize.xs"),
+			"line-height": theme("lineHeight.4"),
+			"border-radius": theme("borderRadius.full"),
+			padding: "theme('padding[0.5]') theme('padding[2.5]')",
+		},
+		".badge-primary": {
+			color: theme("colors.primary.foreground"),
+			"background-color": theme("backgroundColor.primary.DEFAULT"),
+		},
+		".badge-secondary": {
+			color: theme("colors.secondary.foreground"),
+			"background-color": theme("backgroundColor.secondary.DEFAULT"),
+		},
+		".badge-destructive": {
+			color: theme("colors.destructive.foreground"),
+			"background-color": theme("backgroundColor.destructive.DEFAULT"),
 		},
 	};
 
@@ -34,7 +56,7 @@ export default plugin(({ addComponents, theme }) => {
 				opacity: theme("opacity.50"),
 				"pointer-events": "none",
 			},
-			...focusVisible,
+			"&:focus-visible": focusVisible,
 		},
 		".button-primary": {
 			"background-color": theme("backgroundColor.primary.DEFAULT"),
@@ -60,10 +82,20 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
+	const card: CSSRuleObject = {
+		".card": {
+			"background-color": theme("backgroundColor.card"),
+			padding: theme("padding.6"),
+			"border-radius": theme("borderRadius.md"),
+			"box-shadow": theme("boxShadow.sm"),
+			border,
+		},
+	};
+
 	const input: CSSRuleObject = {
 		".input": {
 			display: "flex",
-			border: 'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")',
+			border,
 			"border-radius": theme("borderRadius.DEFAULT"),
 			"background-color": theme("backgroundColor.background"),
 			padding: 'theme("padding.2") theme("padding.3")',
@@ -76,7 +108,7 @@ export default plugin(({ addComponents, theme }) => {
 				opacity: theme("opacity.70"),
 			},
 			"&:disabled": { opacity: theme("opacity.50"), cursor: "not-allowed" },
-			...focusVisible,
+			"&:focus-visible": focusVisible,
 		},
 		'input:not([type="checkbox"]):not([type="radio"]).input, select.input, textarea.input':
 			{
@@ -120,6 +152,7 @@ export default plugin(({ addComponents, theme }) => {
 				background: theme("backgroundColor.primary.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
+				"box-shadow": theme("boxShadow.DEFAULT"),
 			},
 			"&::-moz-range-thumb": {
 				"margin-top": "-0.375rem",
@@ -129,6 +162,7 @@ export default plugin(({ addComponents, theme }) => {
 				background: theme("backgroundColor.primary.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
+				"box-shadow": theme("boxShadow.DEFAULT"),
 			},
 			"&::-webkit-slider-runnable-track": {
 				"border-radius": theme("borderRadius.full"),
@@ -160,9 +194,32 @@ export default plugin(({ addComponents, theme }) => {
 			color: theme("colors.primary.DEFAULT"),
 			"text-decoration": "underline",
 			"text-underline-offset": theme("textUnderlineOffset.2"),
-			...focusVisible,
+			"&:focus-visible": focusVisible,
 		},
 	};
 
-	addComponents([button, input, label, link]);
+	const progress: CSSRuleObject = {
+		".progress": {
+			height: theme("height.2"),
+			width: theme("width.full"),
+			"background-color": theme("backgroundColor.secondary.DEFAULT"),
+			"border-radius": theme("borderRadius.full"),
+		},
+		".progress[value]": {
+			"&::-webkit-progress-bar": {
+				"background-color": theme("backgroundColor.secondary.DEFAULT"),
+				"border-radius": theme("borderRadius.full"),
+			},
+			"&::-moz-progress-bar": {
+				"background-color": theme("backgroundColor.primary.DEFAULT"),
+				"border-radius": theme("borderRadius.full"),
+			},
+			"&::-webkit-progress-value": {
+				"background-color": theme("backgroundColor.primary.DEFAULT"),
+				"border-radius": theme("borderRadius.full"),
+			},
+		},
+	};
+
+	addComponents([badge, button, card, input, label, link, progress]);
 });
