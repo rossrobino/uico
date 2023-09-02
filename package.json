@@ -1,6 +1,6 @@
 {
 	"name": "layercomp",
-	"version": "0.0.15",
+	"version": "0.0.16",
 	"description": "A layer of components for TailwindCSS projects",
 	"keywords": [
 		"CSS",

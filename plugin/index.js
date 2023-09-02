@@ -87,6 +87,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
 	const card = {
 		".card": {
+			color: theme("colors.card.foreground"),
 			"background-color": theme("backgroundColor.card"),
 			padding: theme("padding.6"),
 			"border-radius": theme("borderRadius.md"),
