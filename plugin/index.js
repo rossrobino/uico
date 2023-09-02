@@ -106,7 +106,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 			padding: 'theme("padding.2") theme("padding.3")',
 			width: theme("width.full"),
 			height: theme("height.10"),
-			"accent-color": theme("accentColor.primary.DEFAULT"),
+			"accent-color": theme("accentColor.muted.foreground"),
 			"font-size": theme("fontSize.sm"),
 			"line-height": theme("lineHeight.5"),
 			"&::placeholder": {
