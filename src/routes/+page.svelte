@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Badge from "./components/Badge.svelte";
-	import Button from "./components/Button.svelte";
-	import Card from "./components/Card.svelte";
-	import Input from "./components/Input.svelte";
-	import Link from "./components/Link.svelte";
-	import Progress from "./components/Progress.svelte";
+	import Badge from "$lib/components/Badge.svelte";
+	import Button from "$lib/components/Button.svelte";
+	import Card from "$lib/components/Card.svelte";
+	import Input from "$lib/components/Input.svelte";
+	import Link from "$lib/components/Link.svelte";
+	import Progress from "$lib/components/Progress.svelte";
 
 	export let data;
 

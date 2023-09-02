@@ -1,16 +1,17 @@
 import plugin from "tailwindcss/plugin.js";
-import type { CSSRuleObject } from "tailwindcss/types/config.js";
 
-export default plugin(({ addComponents, theme }) => {
+const layercomp = plugin(({ addComponents, theme }) => {
 	const border =
 		'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
 
-	const focusVisible: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const focusVisible = {
 		outline: 'theme("outlineColor.foreground") solid theme("outlineWidth.2")',
 		"outline-offset": theme("outlineOffset.2"),
 	};
 
-	const badge: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const badge = {
 		".badge": {
 			"font-size": theme("fontSize.xs"),
 			"line-height": theme("lineHeight.4"),
@@ -31,7 +32,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const button: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const button = {
 		".button": {
 			display: "flex",
 			"justify-content": "center",
@@ -82,7 +84,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const card: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const card = {
 		".card": {
 			"background-color": theme("backgroundColor.card"),
 			padding: theme("padding.6"),
@@ -92,7 +95,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const input: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const input = {
 		".input": {
 			display: "flex",
 			border,
@@ -180,7 +184,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const label: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const label = {
 		".label": {
 			"font-weight": theme("fontWeight.medium"),
 			"font-size": theme("fontSize.sm"),
@@ -188,7 +193,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const link: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const link = {
 		".link": {
 			cursor: "pointer",
 			color: theme("colors.primary.DEFAULT"),
@@ -198,7 +204,8 @@ export default plugin(({ addComponents, theme }) => {
 		},
 	};
 
-	const progress: CSSRuleObject = {
+	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
+	const progress = {
 		".progress": {
 			height: theme("height.2"),
 			width: theme("width.full"),
@@ -223,3 +230,5 @@ export default plugin(({ addComponents, theme }) => {
 
 	addComponents([badge, button, card, input, label, link, progress]);
 });
+
+export { layercomp };

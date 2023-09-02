@@ -1,5 +1,5 @@
-import md from "$site/md/README.md?raw";
 import { marked } from "marked";
+import md from "$lib/README.md?raw";
 
 export const prerender = true;
 

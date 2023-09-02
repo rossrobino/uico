@@ -10,5 +10,6 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "NodeNext"
-	}
+	},
+	"include": ["./plugin/**/*.js", "./scripts/**/*.js"]
 }
