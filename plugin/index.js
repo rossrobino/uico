@@ -1,19 +1,27 @@
-import plugin from "tailwindcss/plugin.js";
+import plugin from "tailwindcss/plugin";
 
 const uico = plugin(({ addComponents, theme }) => {
+	// reusable styles
+
 	const border =
 		'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
 
 	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
-	const focusVisible = {
+	const outline = {
 		outline:
 			'theme("outlineColor.accent.DEFAULT") solid theme("outlineWidth.2")',
 		"outline-offset": theme("outlineOffset.2"),
 	};
 
+	// components
+
 	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
 	const badge = {
 		".badge": {
+			display: "flex",
+			"align-items": "center",
+			"justify-content": "center",
+			height: theme("height.5"),
 			"font-size": theme("fontSize.xs"),
 			"line-height": theme("lineHeight.4"),
 			"border-radius": theme("borderRadius.DEFAULT"),
@@ -31,6 +39,11 @@ const uico = plugin(({ addComponents, theme }) => {
 			color: theme("colors.destructive.foreground"),
 			"background-color": theme("backgroundColor.destructive.DEFAULT"),
 		},
+		".badge-outline": {
+			color: theme("colors.foreground"),
+			"background-color": theme("backgroundColor.background"),
+			border,
+		},
 	};
 
 	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
@@ -42,7 +55,6 @@ const uico = plugin(({ addComponents, theme }) => {
 			"transition-duration": theme("transitionDuration.DEFAULT"),
 			"transition-property": theme("transitionProperty.DEFAULT"),
 			"transition-timing-function": theme("transitionTimingFunction.DEFAULT"),
-			"box-shadow": theme("boxShadow.DEFAULT"),
 			"border-radius": theme("borderRadius.DEFAULT"),
 			padding: "theme('padding.2') theme('padding.3')",
 			height: theme("height.10"),
@@ -51,15 +63,11 @@ const uico = plugin(({ addComponents, theme }) => {
 			"line-height": theme("lineHeight.5"),
 			"letter-spacing": theme("letterSpacing.wide"),
 			"&:hover": { opacity: theme("opacity.90") },
-			"&:active": {
-				transform: "scale(.98)",
-				"box-shadow": "none",
-			},
 			"&:disabled": {
 				opacity: theme("opacity.50"),
 				"pointer-events": "none",
 			},
-			"&:focus-visible": focusVisible,
+			"&:focus-visible": outline,
 		},
 		".button-primary": {
 			"background-color": theme("backgroundColor.primary.DEFAULT"),
@@ -74,8 +82,15 @@ const uico = plugin(({ addComponents, theme }) => {
 			color: theme("colors.destructive.foreground"),
 		},
 		".button-ghost": {
-			"box-shadow": "none",
 			"background-color": "transparent",
+			"&:hover": {
+				"background-color": theme("backgroundColor.muted.DEFAULT"),
+			},
+		},
+		".button-outline": {
+			"background-color": theme("backgroundColor.background"),
+			color: theme("colors.foreground"),
+			border,
 			"&:hover": {
 				"background-color": theme("backgroundColor.muted.DEFAULT"),
 			},
@@ -110,12 +125,12 @@ const uico = plugin(({ addComponents, theme }) => {
 			"accent-color": theme("accentColor.accent.DEFAULT"),
 			"font-size": theme("fontSize.sm"),
 			"line-height": theme("lineHeight.5"),
-			"box-shadow": theme("boxShadow.sm"),
 			"&::placeholder": {
-				opacity: theme("opacity.70"),
+				opacity: theme("opacity.60"),
+				color: "inherit",
 			},
 			"&:disabled": { opacity: theme("opacity.50"), cursor: "not-allowed" },
-			"&:focus-visible": focusVisible,
+			"&:focus-visible": outline,
 		},
 		'input:not([type="checkbox"]):not([type="radio"]).input, select.input, textarea.input':
 			{
@@ -127,7 +142,6 @@ const uico = plugin(({ addComponents, theme }) => {
 			"aspect-ratio": theme("aspectRatio.square"),
 			width: theme("width.5"),
 			height: theme("height.4"),
-			"box-shadow": "none",
 		},
 		'input[type="color"].input': {
 			"border-width": "0",
@@ -149,7 +163,6 @@ const uico = plugin(({ addComponents, theme }) => {
 		'input[type="range"].input': {
 			cursor: "pointer",
 			border: "none",
-			"box-shadow": "none",
 			background: "transparent",
 			"padding-right": "0",
 			"padding-left": "0",
@@ -162,7 +175,7 @@ const uico = plugin(({ addComponents, theme }) => {
 				background: theme("backgroundColor.accent.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
-				"box-shadow": theme("boxShadow.DEFAULT"),
+				"box-shadow": "none", // iOS safari
 			},
 			"&::-moz-range-thumb": {
 				"margin-top": "-0.375rem",
@@ -172,7 +185,6 @@ const uico = plugin(({ addComponents, theme }) => {
 				background: theme("backgroundColor.accent.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
-				"box-shadow": theme("boxShadow.DEFAULT"),
 			},
 			"&::-webkit-slider-runnable-track": {
 				"border-radius": theme("borderRadius.full"),
@@ -184,9 +196,6 @@ const uico = plugin(({ addComponents, theme }) => {
 				background: theme("backgroundColor.accent.DEFAULT"),
 				height: theme("height.2"),
 			},
-		},
-		"select[multiple].input, textarea.input": {
-			height: theme("height.20"),
 		},
 	};
 
@@ -206,35 +215,11 @@ const uico = plugin(({ addComponents, theme }) => {
 			color: theme("colors.primary.DEFAULT"),
 			"text-decoration": "underline",
 			"text-underline-offset": theme("textUnderlineOffset.2"),
-			"&:focus-visible": focusVisible,
+			"&:focus-visible": outline,
 		},
 	};
 
-	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
-	const progress = {
-		".progress": {
-			height: theme("height.2"),
-			width: theme("width.full"),
-			"background-color": theme("backgroundColor.accent.foreground"),
-			"border-radius": theme("borderRadius.full"),
-		},
-		".progress[value]": {
-			"&::-webkit-progress-bar": {
-				"background-color": theme("backgroundColor.accent.foreground"),
-				"border-radius": theme("borderRadius.full"),
-			},
-			"&::-moz-progress-bar": {
-				"background-color": theme("backgroundColor.accent.DEFAULT"),
-				"border-radius": theme("borderRadius.full"),
-			},
-			"&::-webkit-progress-value": {
-				"background-color": theme("backgroundColor.accent.DEFAULT"),
-				"border-radius": theme("borderRadius.full"),
-			},
-		},
-	};
-
-	addComponents([badge, button, card, input, label, link, progress]);
+	addComponents([badge, button, card, input, label, link]);
 });
 
 export { uico };

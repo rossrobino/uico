@@ -5,7 +5,6 @@
 	import Card from "$lib/components/Card.svelte";
 	import Input from "$lib/components/Input.svelte";
 	import Link from "$lib/components/Link.svelte";
-	import Progress from "$lib/components/Progress.svelte";
 	import { convertColorsToHSL } from "$lib/utilities";
 	import Theme from "$lib/components/theme/Theme.svelte";
 
@@ -17,7 +16,6 @@
 		{ name: ".card", comp: Card },
 		{ name: ".input", comp: Input },
 		{ name: ".link", comp: Link },
-		{ name: ".progress", comp: Progress },
 	];
 
 	let colors: Record<string, string> = {
@@ -59,25 +57,22 @@
 
 <svelte:head>
 	<title>uico</title>
-	<meta
-		name="description"
-		content="UI components for TailwindCSS projects"
-	/>
+	<meta name="description" content="UI components for TailwindCSS projects" />
 </svelte:head>
 
 <div class="prose prose-zinc w-full prose-a:link">
 	{@html data.readMe}
 	<Theme bind:colors bind:hslColors bind:radius />
 
+	<h2>Components</h2>
 	<div
 		style={customProps}
 		class="card mt-8 bg-background text-foreground prose-headings:text-foreground"
 	>
-		<h2 class="mt-0">Preview</h2>
+		<h3 class="mt-0">Preview</h3>
 		<p class="border-l-4 bg-muted px-2 py-1 italic text-muted-foreground">
 			Select "Theme" in the upper right corner to customize.
 		</p>
-		<h3>Components</h3>
 		{#each components as { name, comp }}
 			<section>
 				<h4>{name}</h4>
