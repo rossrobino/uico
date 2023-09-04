@@ -69,7 +69,10 @@
 	{@html data.readMe}
 	<Theme bind:colors bind:hslColors bind:radius />
 
-	<div style={customProps} class="card mt-8 bg-background text-foreground">
+	<div
+		style={customProps}
+		class="card mt-8 bg-background text-foreground prose-headings:text-foreground"
+	>
 		<h2 class="mt-0">Preview</h2>
 		<p class="border-l-4 bg-muted px-2 py-1 italic text-muted-foreground">
 			Select "Theme" in the upper right corner to customize.
