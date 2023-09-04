@@ -1,6 +1,6 @@
 # uico
 
-## A layer of UI components for TailwindCSS projects
+## UI components for TailwindCSS projects
 
 - [GitHub](https://github.com/rossrobino/uico)
 - [Preview](https://uico.robino.dev)

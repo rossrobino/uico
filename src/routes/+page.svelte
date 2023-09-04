@@ -61,7 +61,7 @@
 	<title>uico</title>
 	<meta
 		name="description"
-		content="A layer of UI components for TailwindCSS projects"
+		content="UI components for TailwindCSS projects"
 	/>
 </svelte:head>
 
