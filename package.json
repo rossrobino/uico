@@ -1,6 +1,6 @@
 {
 	"name": "layercomp",
-	"version": "0.0.16",
+	"version": "0.0.17",
 	"description": "A layer of components for TailwindCSS projects",
 	"keywords": [
 		"CSS",
@@ -27,7 +27,7 @@
 		"plugin"
 	],
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -48,6 +48,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.5.0",
 		"@typescript-eslint/parser": "^6.5.0",
 		"autoprefixer": "^10.4.15",
+		"drab": "^3.0.5",
 		"eslint": "^8.48.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.33.0",

@@ -6,7 +6,8 @@ const layercomp = plugin(({ addComponents, theme }) => {
 
 	/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
 	const focusVisible = {
-		outline: 'theme("outlineColor.foreground") solid theme("outlineWidth.2")',
+		outline:
+			'theme("outlineColor.accent.DEFAULT") solid theme("outlineWidth.2")',
 		"outline-offset": theme("outlineOffset.2"),
 	};
 
@@ -15,7 +16,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 		".badge": {
 			"font-size": theme("fontSize.xs"),
 			"line-height": theme("lineHeight.4"),
-			"border-radius": theme("borderRadius.full"),
+			"border-radius": theme("borderRadius.DEFAULT"),
 			padding: "theme('padding[0.5]') theme('padding[2.5]')",
 		},
 		".badge-primary": {
@@ -51,7 +52,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 			"letter-spacing": theme("letterSpacing.wide"),
 			"&:hover": { opacity: theme("opacity.90") },
 			"&:active": {
-				transform: "scale(theme('scale.95'))",
+				transform: "scale(.98)",
 				"box-shadow": "none",
 			},
 			"&:disabled": {
@@ -88,7 +89,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 	const card = {
 		".card": {
 			color: theme("colors.card.foreground"),
-			"background-color": theme("backgroundColor.card"),
+			"background-color": theme("backgroundColor.card.DEFAULT"),
 			padding: theme("padding.6"),
 			"border-radius": theme("borderRadius.md"),
 			"box-shadow": theme("boxShadow.sm"),
@@ -106,9 +107,10 @@ const layercomp = plugin(({ addComponents, theme }) => {
 			padding: 'theme("padding.2") theme("padding.3")',
 			width: theme("width.full"),
 			height: theme("height.10"),
-			"accent-color": theme("accentColor.muted.foreground"),
+			"accent-color": theme("accentColor.accent.DEFAULT"),
 			"font-size": theme("fontSize.sm"),
 			"line-height": theme("lineHeight.5"),
+			"box-shadow": theme("boxShadow.sm"),
 			"&::placeholder": {
 				opacity: theme("opacity.70"),
 			},
@@ -125,10 +127,12 @@ const layercomp = plugin(({ addComponents, theme }) => {
 			"aspect-ratio": theme("aspectRatio.square"),
 			width: theme("width.5"),
 			height: theme("height.4"),
+			"box-shadow": "none",
 		},
 		'input[type="color"].input': {
 			"border-width": "0",
 			padding: "0",
+			"background-color": "transparent",
 		},
 		'input[type="file"].input': {
 			"&::file-selector-button": {
@@ -145,6 +149,7 @@ const layercomp = plugin(({ addComponents, theme }) => {
 		'input[type="range"].input': {
 			cursor: "pointer",
 			border: "none",
+			"box-shadow": "none",
 			background: "transparent",
 			"padding-right": "0",
 			"padding-left": "0",
@@ -152,9 +157,9 @@ const layercomp = plugin(({ addComponents, theme }) => {
 				"-webkit-appearance": "none",
 				"margin-top": "-0.375rem",
 				border:
-					'theme("borderWidth.2") solid theme("borderColor.primary.DEFAULT")',
+					'theme("borderWidth.2") solid theme("borderColor.accent.DEFAULT")',
 				"border-radius": theme("borderRadius.full"),
-				background: theme("backgroundColor.primary.foreground"),
+				background: theme("backgroundColor.accent.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
 				"box-shadow": theme("boxShadow.DEFAULT"),
@@ -164,19 +169,19 @@ const layercomp = plugin(({ addComponents, theme }) => {
 				border:
 					'theme("borderWidth.2") solid theme("borderColor.primary.DEFAULT")',
 				"border-radius": theme("borderRadius.full"),
-				background: theme("backgroundColor.primary.foreground"),
+				background: theme("backgroundColor.accent.foreground"),
 				width: theme("width.5"),
 				height: theme("height.5"),
 				"box-shadow": theme("boxShadow.DEFAULT"),
 			},
 			"&::-webkit-slider-runnable-track": {
 				"border-radius": theme("borderRadius.full"),
-				background: theme("backgroundColor.primary.DEFAULT"),
+				background: theme("backgroundColor.accent.DEFAULT"),
 				height: theme("height.2"),
 			},
 			"&::-moz-range-track": {
 				"border-radius": theme("borderRadius.full"),
-				background: theme("backgroundColor.primary.DEFAULT"),
+				background: theme("backgroundColor.accent.DEFAULT"),
 				height: theme("height.2"),
 			},
 		},
@@ -210,20 +215,20 @@ const layercomp = plugin(({ addComponents, theme }) => {
 		".progress": {
 			height: theme("height.2"),
 			width: theme("width.full"),
-			"background-color": theme("backgroundColor.secondary.DEFAULT"),
+			"background-color": theme("backgroundColor.accent.foreground"),
 			"border-radius": theme("borderRadius.full"),
 		},
 		".progress[value]": {
 			"&::-webkit-progress-bar": {
-				"background-color": theme("backgroundColor.secondary.DEFAULT"),
+				"background-color": theme("backgroundColor.accent.foreground"),
 				"border-radius": theme("borderRadius.full"),
 			},
 			"&::-moz-progress-bar": {
-				"background-color": theme("backgroundColor.primary.DEFAULT"),
+				"background-color": theme("backgroundColor.accent.DEFAULT"),
 				"border-radius": theme("borderRadius.full"),
 			},
 			"&::-webkit-progress-value": {
-				"background-color": theme("backgroundColor.primary.DEFAULT"),
+				"background-color": theme("backgroundColor.accent.DEFAULT"),
 				"border-radius": theme("borderRadius.full"),
 			},
 		},

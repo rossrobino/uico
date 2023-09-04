@@ -8,8 +8,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true,
-		"moduleResolution": "NodeNext"
+		"strict": true
 	},
 	"include": ["./plugin/**/*.js", "./scripts/**/*.js"]
 }
