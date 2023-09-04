@@ -58,10 +58,10 @@
 </script>
 
 <svelte:head>
-	<title>layercomp</title>
+	<title>uico</title>
 	<meta
 		name="description"
-		content="A layer of components for TailwindCSS projects"
+		content="A layer of UI components for TailwindCSS projects"
 	/>
 </svelte:head>
 

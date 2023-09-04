@@ -1,7 +1,7 @@
 import typography from "@tailwindcss/typography";
 
-// import from "layercomp" instead of relative import
-import { layercomp } from "./plugin";
+// import from "uico" instead of relative import
+import { uico } from "./plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,14 +14,6 @@ export default {
 			colors: {
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
-				card: {
-					DEFAULT: "hsl(var(--card))",
-					foreground: "hsl(var(--card-foreground))",
-				},
-				accent: {
-					DEFAULT: "hsl(var(--accent))",
-					foreground: "hsl(var(--accent-foreground))",
-				},
 				muted: {
 					DEFAULT: "hsl(var(--muted))",
 					foreground: "hsl(var(--muted-foreground))",
@@ -38,6 +30,14 @@ export default {
 					DEFAULT: "hsl(var(--destructive))",
 					foreground: "hsl(var(--destructive-foreground))",
 				},
+				accent: {
+					DEFAULT: "hsl(var(--accent))",
+					foreground: "hsl(var(--accent-foreground))",
+				},
+				card: {
+					DEFAULT: "hsl(var(--card))",
+					foreground: "hsl(var(--card-foreground))",
+				},
 			},
 			borderRadius: {
 				lg: "calc(var(--radius) + 4px)",
@@ -47,5 +47,5 @@ export default {
 			},
 		},
 	},
-	plugins: [typography, layercomp],
+	plugins: [typography, uico],
 };

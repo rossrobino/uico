@@ -1,19 +1,19 @@
 {
-	"name": "layercomp",
-	"version": "0.0.17",
-	"description": "A layer of components for TailwindCSS projects",
+	"name": "uico",
+	"version": "0.0.18",
+	"description": "A layer of UI components for TailwindCSS projects",
 	"keywords": [
 		"CSS",
 		"TailwindCSS",
 		"components"
 	],
-	"homepage": "https://layercomp.robino.dev",
+	"homepage": "https://uico.robino.dev",
 	"license": "MIT",
 	"author": {
 		"name": "Ross Robino",
 		"url": "https://robino.dev"
 	},
-	"repository": "github:rossrobino/layercomp",
+	"repository": "github:rossrobino/uico",
 	"type": "module",
 	"types": "./plugin/index.js",
 	"main": "./plugin/index.js",
@@ -42,9 +42,9 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^3.0.3",
-		"@sveltejs/kit": "^1.24.0",
+		"@sveltejs/kit": "^1.24.1",
 		"@tailwindcss/typography": "^0.5.9",
-		"@types/node": "^20.5.7",
+		"@types/node": "^20.5.9",
 		"@typescript-eslint/eslint-plugin": "^6.5.0",
 		"@typescript-eslint/parser": "^6.5.0",
 		"autoprefixer": "^10.4.15",
@@ -52,7 +52,7 @@
 		"eslint": "^8.48.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.33.0",
-		"marked": "^7.0.5",
+		"marked": "^8.0.0",
 		"postcss": "^8.4.29",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.0.3",

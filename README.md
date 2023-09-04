@@ -1,18 +1,18 @@
-# layercomp
+# uico
 
-## A layer of components for TailwindCSS projects
+## A layer of UI components for TailwindCSS projects
 
-- [GitHub](https://github.com/rossrobino/layercomp)
-- [Preview](https://layercomp.robino.dev)
+- [GitHub](https://github.com/rossrobino/uico)
+- [Preview](https://uico.robino.dev)
 
-These components are built with CSS and a single HTML element. **layercomp** is a TailwindCSS plugin, it works wherever Tailwind does.
+These components are built with CSS and a single HTML element. **uico** is a TailwindCSS plugin, it works wherever Tailwind does.
 
 Check out [shadcn/ui](https://ui.shadcn.com/) to see the styles these components are based on.
 
 ## Install
 
 ```bash
-npm i -D layercomp
+npm i -D uico
 ```
 
 ## Configure Tailwind
@@ -21,5 +21,5 @@ This plugin does not supply colors but expects certain colors to be configured i
 
 This site provides a way to customize and preview your theme as well as generate the custom properties needed.
 
-- [tailwind.config.js](https://github.com/rossrobino/layercomp/blob/main/tailwind.config.js)
-- [css](https://github.com/rossrobino/layercomp/blob/main/src/app.postcss)
+- [tailwind.config.js](https://github.com/rossrobino/uico/blob/main/tailwind.config.js)
+- [css](https://github.com/rossrobino/uico/blob/main/src/app.postcss)

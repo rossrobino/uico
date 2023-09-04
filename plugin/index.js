@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin.js";
 
-const layercomp = plugin(({ addComponents, theme }) => {
+const uico = plugin(({ addComponents, theme }) => {
 	const border =
 		'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
 
@@ -237,4 +237,4 @@ const layercomp = plugin(({ addComponents, theme }) => {
 	addComponents([badge, button, card, input, label, link, progress]);
 });
 
-export { layercomp };
+export { uico };
