@@ -14,13 +14,13 @@
 	class="button button-primary fixed right-6 top-6 z-30"
 	on:click={() => (display = true)}
 >
-	Theme
+	Customize
 </button>
 
 <Sheet
 	bind:display
 	class="z-40"
-	classSheet="p-6 shadow bg-card w-full overflow-y-auto"
+	classSheet="card rounded-none border-none w-full overflow-y-auto"
 	position="r"
 >
 	<div class="mb-4 flex items-center justify-between">

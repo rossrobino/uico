@@ -2,4 +2,6 @@
 	import "../app.postcss";
 </script>
 
-<slot />
+<main class="prose prose-zinc w-full max-w-none prose-a:link">
+	<slot />
+</main>
