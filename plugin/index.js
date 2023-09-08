@@ -320,7 +320,7 @@ const uico = plugin(
 						"Arial",
 						"sans-serif",
 					],
-					"serif-mono": ["Nimbus Mono PS", "Courier New", "monospace"],
+					"mono-serif": ["Nimbus Mono PS", "Courier New", "monospace"],
 					industrial: [
 						"Bahnschrift",
 						"DIN Alternate",

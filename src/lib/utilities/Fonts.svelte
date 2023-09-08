@@ -10,7 +10,7 @@
 		"font-humanist-geometric",
 		"font-humanist-classical",
 		"font-neo-grotesque",
-		"font-serif-mono",
+		"font-mono-serif",
 		"font-industrial",
 		"font-serif-slab",
 		"font-sans-rounded",
