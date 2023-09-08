@@ -7,7 +7,10 @@
 
 **uico** provides utility classes for basic UI elements, it enables the use of CSS classes for basic components instead of relying a JavaScript framework. **uico** is a Tailwind plugin, it works wherever Tailwind does. This site can also be used to create a color scheme for a project without using the plugin.
 
-Check out [shadcn/ui](https://ui.shadcn.com/) to see the styles these components are based on.
+The advantage of using a plugin instead of writing custom CSS is that the Tailwind compiler will remove any classes that are not used in the project, ensuring only what is used gets added to the final output.
+
+- Check out [shadcn/ui](https://ui.shadcn.com/) to see the styles these components are based on.
+- All of the [Modern Font Stacks](https://modernfontstacks.com/) are also included as utility classes. These are system font stacks, so you are not shipping an extra font with your bundle.
 
 ## Install
 
@@ -22,8 +25,6 @@ npm i -D uico
 - [tailwind.config.js](https://github.com/rossrobino/uico/blob/main/tailwind.config.js)
 - [css](https://github.com/rossrobino/uico/blob/main/src/app.postcss)
 
-**uico** does not supply colors but expects certain colors to be configured in your `theme`. Utilizing CSS custom properties makes swapping themes simpler, you can also set the theme directly in your `tailwind.config.js` instead.
+**uico** does not supply colors but expects certain colors as CSS custom properties. This site provides a way to customize and preview your theme as well as generate the custom properties needed.
 
 After configuring your theme, these colors can be utilized throughout the project with the added benefit of auto-complete if you have the TailwindCSS extension installed in your IDE. You can also utilize opacity modifiers with these colors: `text-primary-foreground/80`.
-
-This site provides a way to customize and preview your theme as well as generate the custom properties needed.

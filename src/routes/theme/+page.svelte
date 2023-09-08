@@ -1,11 +1,15 @@
 <script lang="ts">
 	import twColors from "tailwindcss/colors";
+
 	import Badge from "$lib/components/Badge.svelte";
 	import Button from "$lib/components/Button.svelte";
 	import Card from "$lib/components/Card.svelte";
 	import Input from "$lib/components/Input.svelte";
 	import Link from "$lib/components/Link.svelte";
-	import { convertColorsToHSL } from "$lib/utilities";
+
+	import Fonts from "$lib/utilities/Fonts.svelte";
+
+	import { convertColorsToHSL } from "$lib/colors";
 	import Theme from "./Theme.svelte";
 
 	const components = [
@@ -62,7 +66,7 @@
 
 <article
 	style={customProps}
-	class="bg-background p-6 text-foreground prose-headings:text-foreground"
+	class="mb-12 bg-background p-6 text-foreground prose-headings:text-foreground"
 >
 	<div class="max-w-prose">
 		<h1>Theme</h1>
@@ -70,11 +74,14 @@
 		<p class="border-l-4 bg-muted px-2 py-1 italic text-muted-foreground">
 			Select "Customize" in the upper right corner to customize.
 		</p>
+		<h2>Components</h2>
 		{#each components as { name, comp }}
 			<section>
-				<h2>{name}</h2>
+				<h3>{name}</h3>
 				<svelte:component this={comp} />
 			</section>
 		{/each}
+		<h2>Utilities</h2>
+		<Fonts />
 	</div>
 </article>

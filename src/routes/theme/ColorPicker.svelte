@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { findColor, randomId, type CustomColors } from "$lib/utilities";
+	import { findColor, randomId, type CustomColors } from "$lib/colors";
 	import twColors from "tailwindcss/colors";
 
 	export let value: string;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { findColor, type CustomColors } from "$lib/utilities";
+	import { findColor, type CustomColors } from "$lib/colors";
 	import twColors from "tailwindcss/colors";
 	export let colors: Record<string, string>;
 	export let hslColors: Record<string, string>;
