@@ -1,8 +1,8 @@
 import plugin from "tailwindcss/plugin";
 
-const uico = plugin(
-	({ addComponents, theme }) => {
-		// reusable
+export const uico = plugin(
+	({ addBase, addComponents, theme }) => {
+		// reusable properties
 
 		const border =
 			'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
@@ -13,6 +13,14 @@ const uico = plugin(
 				'theme("outlineColor.accent.DEFAULT") solid theme("outlineWidth.2")',
 			"outline-offset": theme("outlineOffset.2"),
 		};
+
+		// base
+
+		addBase({
+			html: {
+				"-webkit-tap-highlight-color": "transparent",
+			},
+		});
 
 		// components
 
@@ -371,5 +379,3 @@ const uico = plugin(
 		},
 	},
 );
-
-export { uico };
