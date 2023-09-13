@@ -1,6 +1,6 @@
 {
 	"name": "uico",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "UI components for TailwindCSS projects",
 	"keywords": [
 		"CSS",
@@ -54,7 +54,6 @@
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.33.1",
 		"marked": "^9.0.0",
-		"postcss": "^8.4.29",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.0.3",
 		"prettier-plugin-tailwindcss": "^0.5.4",
@@ -64,5 +63,70 @@
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9"
+	},
+	"prettier": {
+		"useTabs": true,
+		"printWidth": 80,
+		"htmlWhitespaceSensitivity": "ignore",
+		"plugins": [
+			"prettier-plugin-svelte",
+			"prettier-plugin-tailwindcss"
+		],
+		"overrides": [
+			{
+				"files": "*.svelte",
+				"options": {
+					"parser": "svelte"
+				}
+			}
+		],
+		"filepath": ""
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": [
+			"eslint:recommended",
+			"plugin:@typescript-eslint/recommended",
+			"plugin:svelte/recommended",
+			"prettier"
+		],
+		"parser": "@typescript-eslint/parser",
+		"plugins": [
+			"@typescript-eslint"
+		],
+		"parserOptions": {
+			"sourceType": "module",
+			"ecmaVersion": 2020,
+			"extraFileExtensions": [
+				".svelte"
+			]
+		},
+		"env": {
+			"browser": true,
+			"es2017": true,
+			"node": true
+		},
+		"overrides": [
+			{
+				"files": [
+					"*.svelte"
+				],
+				"parser": "svelte-eslint-parser",
+				"parserOptions": {
+					"parser": "@typescript-eslint/parser"
+				}
+			}
+		],
+		"ignorePatterns": [
+			".DS_Store",
+			"node_modules",
+			"/build",
+			"/.svelte-kit",
+			"/package",
+			".env",
+			".env.*",
+			"!.env.example",
+			"package-lock.json"
+		]
 	}
 }

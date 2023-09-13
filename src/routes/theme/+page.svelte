@@ -66,12 +66,12 @@
 
 <article
 	style={customProps}
-	class="mb-12 bg-background p-6 text-foreground prose-headings:text-foreground"
+	class="bg-background text-foreground prose-headings:text-foreground mb-12 p-6"
 >
 	<div class="max-w-prose">
 		<h1>Theme</h1>
 		<a href="/">README</a>
-		<p class="border-l-4 bg-muted px-2 py-1 italic text-muted-foreground">
+		<p class="bg-muted text-muted-foreground border-l-4 px-2 py-1 italic">
 			Select "Customize" in the upper right corner to customize.
 		</p>
 		<h2>Components</h2>

@@ -22,7 +22,7 @@ npm i -D uico
 
 ## Configure Tailwind
 
-- [tailwind.config.js](https://github.com/rossrobino/uico/blob/main/tailwind.config.js)
+- [config](https://github.com/rossrobino/uico/blob/main/vite.config.ts)
 - [css](https://github.com/rossrobino/uico/blob/main/src/app.postcss)
 
 **uico** does not supply colors but expects certain colors as CSS custom properties. This site provides a way to customize and preview your theme as well as generate the custom properties needed.

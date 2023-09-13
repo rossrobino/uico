@@ -1,4 +1,4 @@
-import plugin from "tailwindcss/plugin";
+import plugin from "tailwindcss/plugin.js";
 
 export const uico = plugin(
 	({ addBase, addComponents, theme }) => {
@@ -271,7 +271,7 @@ export const uico = plugin(
 					sm: "calc(var(--radius) - 3px)",
 				},
 				fontFamily: {
-					// https://modernfontstacks.com/#font-stacks
+					// https://modernfontstacks.com
 					antique: [
 						"Superclarendon",
 						"Bookman Old Style",
