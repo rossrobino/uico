@@ -15,7 +15,7 @@
 	},
 	"repository": "github:rossrobino/uico",
 	"type": "module",
-	"types": "./plugin/index.js",
+	"types": "./plugin/index.d.ts",
 	"main": "./plugin/index.js",
 	"exports": {
 		".": {
@@ -35,50 +35,33 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --write . --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss",
-		"pub": "npm i && npm run format && npm run doc && publint && npm publish --access public",
-		"doc": "node scripts/copyReadMe.js"
+		"pub": "bun i && bun format && bun doc && publint && npm publish --access public",
+		"doc": "bun scripts/copyReadMe.js"
 	},
 	"dependencies": {
 		"tailwindcss": "^3.3.3"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^3.0.3",
-		"@sveltejs/kit": "^1.24.1",
+		"@sveltejs/kit": "^1.25.0",
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.6.0",
-		"@typescript-eslint/eslint-plugin": "^6.6.0",
-		"@typescript-eslint/parser": "^6.6.0",
+		"@types/node": "^20.6.1",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
 		"autoprefixer": "^10.4.15",
-		"drab": "^4.0.0",
+		"drab": "^4.1.2",
 		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.33.1",
-		"marked": "^9.0.0",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.0.3",
 		"prettier-plugin-tailwindcss": "^0.5.4",
 		"publint": "^0.2.2",
+		"robino": "^0.0.19",
 		"svelte": "^4.2.0",
 		"svelte-check": "^3.5.1",
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9"
-	},
-	"prettier": {
-		"useTabs": true,
-		"printWidth": 80,
-		"htmlWhitespaceSensitivity": "ignore",
-		"plugins": [
-			"prettier-plugin-svelte",
-			"prettier-plugin-tailwindcss"
-		],
-		"overrides": [
-			{
-				"files": "*.svelte",
-				"options": {
-					"parser": "svelte"
-				}
-			}
-		]
 	}
 }

@@ -1,7 +1,7 @@
-import { marked } from "marked";
+import { process } from "robino/util/md";
 import md from "$lib/README.md?raw";
 
 export const load = async () => {
-	const readMe = marked.parse(md);
+	const { html: readMe } = process(md);
 	return { readMe };
 };
