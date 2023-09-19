@@ -211,6 +211,7 @@ export const uico = plugin(
 		/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
 		const label = {
 			".label": {
+				display: "inline-block",
 				"font-weight": theme("fontWeight.medium"),
 				"font-size": theme("fontSize.sm"),
 				"line-height": theme("lineHeight.none"),
