@@ -7,18 +7,16 @@ export const uico = plugin(
 		const border =
 			'theme("borderWidth.DEFAULT") solid theme("borderColor.DEFAULT")';
 
-		/** @type {import("tailwindcss/types/config.js").CSSRuleObject} */
-		const outline = {
-			outline:
-				'theme("outlineColor.accent.DEFAULT") solid theme("outlineWidth.2")',
-			"outline-offset": theme("outlineOffset.2"),
-		};
-
 		// base
 
 		addBase({
 			html: {
 				"-webkit-tap-highlight-color": "transparent",
+			},
+			"*:focus-visible": {
+				outline:
+					'theme("outlineColor.accent.DEFAULT") solid theme("outlineWidth.2")',
+				"outline-offset": theme("outlineOffset.2"),
 			},
 		});
 
@@ -76,7 +74,6 @@ export const uico = plugin(
 					opacity: theme("opacity.50"),
 					"pointer-events": "none",
 				},
-				"&:focus-visible": outline,
 			},
 			".button-primary": {
 				"background-color": theme("backgroundColor.primary.DEFAULT"),
@@ -139,7 +136,6 @@ export const uico = plugin(
 					color: "inherit",
 				},
 				"&:disabled": { opacity: theme("opacity.50"), cursor: "not-allowed" },
-				"&:focus-visible": outline,
 			},
 			'input:not([type="checkbox"]):not([type="radio"]).input, select.input, textarea.input':
 				{
@@ -225,7 +221,6 @@ export const uico = plugin(
 				color: theme("colors.primary.DEFAULT"),
 				"text-decoration": "underline",
 				"text-underline-offset": theme("textUnderlineOffset.2"),
-				"&:focus-visible": outline,
 			},
 		};
 
