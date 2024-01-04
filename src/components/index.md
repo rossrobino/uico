@@ -63,6 +63,18 @@ After configuring your theme, these colors can be utilized throughout the projec
 
 [TailwindCSS Reference](https://tailwindcss.com/docs/customizing-colors#using-css-variables)
 
+## Customize
+
+These components are designed to be minimal, you can customize and add more styles via CSS.
+
+```css
+@layer components {
+	.card {
+		border: 1px solid theme(borderColor.DEFAULT);
+	}
+}
+```
+
 ## Preview
 
 ### Button
