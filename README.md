@@ -14,7 +14,7 @@ npm i -D uico
 
 ### Config
 
-Import and add the plugin to your `tailwind.config`, optionally, pass in an optional configuration object.
+Import and add the plugin to your `tailwind.config`, optionally, pass in an optional configuration object. Be sure to upgrade Tailwind to the latest version for type compatibility.
 
 ```ts
 // tailwind.config.ts
