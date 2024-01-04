@@ -1,6 +1,6 @@
 {
 	"name": "uico",
-	"version": "0.1.6",
+	"version": "0.2.1",
 	"description": "UI components for TailwindCSS projects",
 	"keywords": [
 		"CSS",
@@ -15,53 +15,38 @@
 	},
 	"repository": "github:rossrobino/uico",
 	"type": "module",
-	"types": "./plugin/index.d.ts",
-	"main": "./plugin/index.js",
+	"types": "./package/dist/index.d.ts",
+	"main": "./package/dist/index.js",
 	"exports": {
 		".": {
-			"types": "./plugin/index.d.ts",
-			"default": "./plugin/index.js"
+			"types": "./package/dist/index.d.ts",
+			"default": "./package/dist/index.js"
 		}
 	},
 	"files": [
-		"plugin"
+		"package/dist"
 	],
 	"scripts": {
-		"dev": "vite dev",
-		"host": "vite dev --host",
-		"build": "vite build",
+		"dev": "vite --host",
+		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --write . --plugin=prettier-plugin-svelte --plugin=prettier-plugin-tailwindcss",
-		"pub": "bun i && bun format && bun doc && publint && npm publish --access public",
-		"doc": "bun scripts/copyReadMe.js"
-	},
-	"dependencies": {
-		"tailwindcss": "^3.3.5"
+		"format": "prettier --write .",
+		"package": "tsup",
+		"pub": "bun i && tsup && npm publish --access public"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^3.0.3",
-		"@sveltejs/kit": "^1.27.5",
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.9.0",
-		"@typescript-eslint/eslint-plugin": "^6.11.0",
-		"@typescript-eslint/parser": "^6.11.0",
+		"@types/node": "^20.10.6",
 		"autoprefixer": "^10.4.16",
-		"drab": "^4.1.4",
-		"eslint": "^8.53.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-svelte": "^2.35.0",
-		"prettier": "^3.1.0",
-		"prettier-plugin-svelte": "^3.1.0",
-		"prettier-plugin-tailwindcss": "^0.5.7",
-		"publint": "^0.2.5",
+		"domco": "^0.3.5",
+		"prettier": "^3.1.1",
+		"prettier-plugin-tailwindcss": "^0.5.10",
 		"robino": "^0.0.39",
-		"svelte": "^4.2.3",
-		"svelte-check": "^3.6.0",
-		"tslib": "^2.6.2",
-		"typescript": "^5.2.2",
-		"vite": "^4.5.0"
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10"
+	},
+	"dependencies": {
+		"tailwindcss": "^3.4.0"
 	}
 }
