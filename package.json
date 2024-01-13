@@ -1,6 +1,6 @@
 {
 	"name": "uico",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "UI components for TailwindCSS projects",
 	"keywords": [
 		"CSS",
@@ -36,17 +36,17 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.10.6",
+		"@types/node": "^20.11.0",
 		"autoprefixer": "^10.4.16",
-		"domco": "^0.3.5",
-		"prettier": "^3.1.1",
-		"prettier-plugin-tailwindcss": "^0.5.10",
+		"domco": "^0.3.7",
+		"prettier": "^3.2.1",
+		"prettier-plugin-tailwindcss": "^0.5.11",
 		"robino": "^0.0.39",
 		"tsup": "^8.0.1",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.10"
+		"vite": "^5.0.11"
 	},
 	"dependencies": {
-		"tailwindcss": "^3.4.0"
+		"tailwindcss": "^3.4.1"
 	}
 }

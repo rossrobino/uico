@@ -185,6 +185,7 @@ export const uico = plugin.withOptions(
 				const card: CSSRuleObject = {
 					".card": {
 						"background-color": themeColors.card,
+						color: themeColors.cardForeground,
 						padding: theme("padding.6"),
 						"border-radius": theme("borderRadius.md"),
 						"box-shadow": theme("boxShadow.sm"),
