@@ -1,0 +1,1 @@
+import "drab/prefetch/define";

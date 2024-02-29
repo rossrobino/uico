@@ -36,15 +36,16 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.11.0",
-		"autoprefixer": "^10.4.16",
-		"domco": "^0.3.7",
-		"prettier": "^3.2.1",
+		"@types/node": "^20.11.24",
+		"autoprefixer": "^10.4.17",
+		"domco": "^0.5.3",
+		"drab": "^5.3.3",
+		"prettier": "^3.2.5",
 		"prettier-plugin-tailwindcss": "^0.5.11",
-		"robino": "^0.0.39",
-		"tsup": "^8.0.1",
+		"robino": "^0.1.0",
+		"tsup": "^8.0.2",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.11"
+		"vite": "^5.1.4"
 	},
 	"dependencies": {
 		"tailwindcss": "^3.4.1"

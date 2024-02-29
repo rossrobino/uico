@@ -192,7 +192,7 @@ These components are designed to be minimal, you can customize and add more styl
 	</div>
 	<div>
 		<div class="flex items-center gap-1">
-			<input type="checkbox" class="input" id="checkbox" />
+			<input type="checkbox" class="input" id="checkbox" switch />
 			<label for="checkbox" class="label">Checkbox</label>
 		</div>
 	</div>
