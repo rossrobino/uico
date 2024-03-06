@@ -39,7 +39,7 @@ export const config: Config = {
 				label.textContent = font;
 
 				const input = document.createElement("input");
-				if (font === "font-humanist-classical") {
+				if (font === "font-sans") {
 					input.setAttribute("checked", "true");
 				}
 				input.className = "input";
