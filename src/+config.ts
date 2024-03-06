@@ -10,7 +10,7 @@ export const config: Config = {
 	layout: await fs.readFile("src/layout.html", "utf-8"),
 
 	layoutBuild: async ({ document, HTMLElement, customElements }, { route }) => {
-		const title = route.at(1)?.toUpperCase() + route.slice(2);
+		const title = route.at(1)?.toUpperCase() + route.slice(2, -1);
 		document.title = "uico" + (title !== "undefined" ? ` - ${title}` : "");
 
 		const md = await readFile(
@@ -79,7 +79,10 @@ export const config: Config = {
 							"active:opacity-90",
 						);
 						okButton.title = `${color}-${num}`;
-						okButton.style.backgroundColor = removeAlphaValue(shade);
+						okButton.setAttribute(
+							"style",
+							`background-color: ${removeAlphaValue(shade)}`,
+						);
 						okButton.setAttribute(
 							"data-copy",
 							removeAlphaValue(shade).slice(6, -1),
