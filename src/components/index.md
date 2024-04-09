@@ -221,7 +221,8 @@ These components are designed to be minimal, you can customize and add more styl
 	<div>
 		<label for="select" class="label">Select</label>
 		<select class="input" id="select">
-			<option value="option1">Option 1</option>
+			<option value="option1">Option 1 lkjh lkjh lkjh ljkh ljkh 
+			</option>
 			<option value="option2">Option 2</option>
 			<option value="option3">Option 3</option>
 		</select>

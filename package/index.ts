@@ -219,6 +219,17 @@ export const uico = plugin.withOptions(
 							"-moz-appearance": "none",
 							appearance: "none",
 						},
+					"select.input:not([multiple])": {
+						"padding-inline-end": theme("padding.9"),
+
+						// copied from daisyUI - https://github.com/saadeghi/daisyui/blob/master/src/components/styled/select.css
+						"background-image":
+							"linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%)",
+						"background-position":
+							"calc(100% - 20px) calc(1px + 50%), calc(100% - 16.1px) calc(1px + 50%)",
+						"background-size": "4px 4px, 4px 4px",
+						"background-repeat": "no-repeat",
+					},
 					'input[type="checkbox"].input, input[type="radio"].input': {
 						"aspect-ratio": theme("aspectRatio.square"),
 						width: theme("width.5"),
