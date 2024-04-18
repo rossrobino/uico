@@ -1,6 +1,6 @@
 import type { Config } from "domco";
 import { readFile } from "fs/promises";
-import { process } from "robino/util/md";
+import { processMarkdown } from "robino/util/md";
 import { oklchColors } from "../package/oklchColors/index.ts";
 import hexColorData from "tailwindcss/colors";
 import { removeAlphaValue } from "../package/util/removeAlphaValue/index.ts";
@@ -17,7 +17,7 @@ export const config: Config = {
 			route === "/" ? "README.md" : `src${route}/index.md`,
 			"utf-8",
 		);
-		const { html } = await process(md);
+		const { html } = await processMarkdown(md);
 		const article = document.querySelector("article");
 		if (article) article.innerHTML = html;
 
