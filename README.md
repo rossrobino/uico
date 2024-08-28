@@ -4,6 +4,8 @@ Base styles and color palettes for any web project.
 
 [Read the docs](https://uico.robino.dev)
 
+## Install
+
 ```bash
 npm i uico
 ```
