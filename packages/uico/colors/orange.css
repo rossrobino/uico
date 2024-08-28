@@ -1,0 +1,13 @@
+:root {
+	--orange-50: oklch(0.99 0.02 55);
+	--orange-100: oklch(0.96 0.06 55);
+	--orange-200: oklch(0.93 0.11 55);
+	--orange-300: oklch(0.89 0.16 55);
+	--orange-400: oklch(0.83 0.2 55);
+	--orange-500: oklch(0.77 0.23 55);
+	--orange-600: oklch(0.69 0.21 55);
+	--orange-700: oklch(0.6 0.19 55);
+	--orange-800: oklch(0.49 0.17 55);
+	--orange-900: oklch(0.37 0.15 55);
+	--orange-950: oklch(0.23 0.13 55);
+}

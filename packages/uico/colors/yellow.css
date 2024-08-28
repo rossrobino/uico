@@ -1,0 +1,13 @@
+:root {
+	--yellow-50: oklch(0.99 0.02 98);
+	--yellow-100: oklch(0.98 0.06 98);
+	--yellow-200: oklch(0.96 0.11 98);
+	--yellow-300: oklch(0.93 0.16 98);
+	--yellow-400: oklch(0.88 0.2 98);
+	--yellow-500: oklch(0.82 0.23 98);
+	--yellow-600: oklch(0.74 0.21 98);
+	--yellow-700: oklch(0.64 0.19 98);
+	--yellow-800: oklch(0.52 0.17 98);
+	--yellow-900: oklch(0.39 0.15 98);
+	--yellow-950: oklch(0.23 0.13 98);
+}

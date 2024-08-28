@@ -1,0 +1,13 @@
+:root {
+	--amber-50: oklch(0.99 0.02 78);
+	--amber-100: oklch(0.97 0.06 78);
+	--amber-200: oklch(0.94 0.11 78);
+	--amber-300: oklch(0.91 0.16 78);
+	--amber-400: oklch(0.86 0.2 78);
+	--amber-500: oklch(0.79 0.23 78);
+	--amber-600: oklch(0.72 0.21 78);
+	--amber-700: oklch(0.62 0.19 78);
+	--amber-800: oklch(0.51 0.17 78);
+	--amber-900: oklch(0.38 0.15 78);
+	--amber-950: oklch(0.23 0.13 78);
+}

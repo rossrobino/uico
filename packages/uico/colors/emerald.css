@@ -1,0 +1,13 @@
+:root {
+	--emerald-50: oklch(0.99 0.02 169);
+	--emerald-100: oklch(0.95 0.06 169);
+	--emerald-200: oklch(0.91 0.11 169);
+	--emerald-300: oklch(0.86 0.16 169);
+	--emerald-400: oklch(0.81 0.2 169);
+	--emerald-500: oklch(0.74 0.23 169);
+	--emerald-600: oklch(0.66 0.21 169);
+	--emerald-700: oklch(0.57 0.19 169);
+	--emerald-800: oklch(0.47 0.17 169);
+	--emerald-900: oklch(0.36 0.15 169);
+	--emerald-950: oklch(0.23 0.13 169);
+}

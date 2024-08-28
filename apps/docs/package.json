@@ -1,0 +1,20 @@
+{
+	"name": "docs",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"check": "tsc",
+		"build": "vite build",
+		"preview": "node dist/server/node.js"
+	},
+	"devDependencies": {
+		"@robino/md": "^0.1.1",
+		"domco": "^0.6.2",
+		"drab": "^5.4.2",
+		"hono": "^4.5.9",
+		"uico": "*",
+		"vite": "^5.4.2"
+	}
+}

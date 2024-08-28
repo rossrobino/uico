@@ -1,0 +1,35 @@
+{
+	"name": "uico",
+	"version": "0.2.4",
+	"description": "Comprehensive Styling with Modern CSS",
+	"keywords": [
+		"CSS"
+	],
+	"homepage": "https://uico.robino.dev",
+	"license": "MIT",
+	"author": {
+		"name": "Ross Robino",
+		"url": "https://robino.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rossrobino/uico.git"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"style": "./style.css",
+	"files": [
+		"README.md",
+		"LICENSE.md",
+		"*.css",
+		"dist"
+	],
+	"scripts": {
+		"check": "tsc --noEmit",
+		"dev": "tsc --watch",
+		"build:js": "tsc",
+		"build:css": "node dist/build",
+		"build": "npm run build:js && npm run build:css"
+	}
+}

@@ -1,38 +1,22 @@
-# Read Me
+# Comprehensive Styling with Modern CSS
 
-**uico** is a minimal TailwindCSS plugin that provides CSS components, system font stack utilities, and a drop in oklch color palette. **uico** works wherever Tailwind does.
+Base styles and color palettes for any web project.
 
-The advantage of using a plugin instead of writing custom CSS is that the Tailwind compiler will remove any classes that are not used in the project, ensuring only what is used gets added to the final output.
-
-## Install
+[Read the docs](https://uico.robino.dev)
 
 ```bash
-npm i -D uico
+npm i uico
 ```
 
-## Setup
+## CSS (recommended)
 
-### Config
+```css
+@import "uico"; /* works with most bundlers */
+@import "node_modules/uico/style.css"; /* alternatively */
+```
 
-Import and add the plugin to your `tailwind.config`, optionally, pass in an optional configuration object. Be sure to upgrade Tailwind to the latest version for type compatibility.
+## JavaScript
 
-```ts
-// tailwind.config.ts
-
-import type { Config } from "tailwindcss";
-import { uico } from "uico"; // import
-
-export default {
-	// ...
-	plugins: [
-		uico({
-			// optional configuration
-			// these are the default values
-			components: true,
-			fonts: true,
-			colorFunction: false,
-			colorPalette: "hex",
-		}),
-	],
-} satisfies Config;
+```js
+import "uico/style.css";
 ```

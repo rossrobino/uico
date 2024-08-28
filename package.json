@@ -1,53 +1,32 @@
 {
-	"name": "uico",
-	"version": "0.2.4",
-	"description": "UI components for TailwindCSS projects",
-	"keywords": [
-		"CSS",
-		"TailwindCSS",
-		"components"
-	],
-	"homepage": "https://uico.robino.dev",
-	"license": "MIT",
-	"author": {
-		"name": "Ross Robino",
-		"url": "https://robino.dev"
-	},
-	"repository": "github:rossrobino/uico",
+	"name": "uico-monorepo",
+	"private": true,
+	"version": "0.0.0",
 	"type": "module",
-	"types": "./package/dist/index.d.ts",
-	"main": "./package/dist/index.js",
-	"exports": {
-		".": {
-			"types": "./package/dist/index.d.ts",
-			"default": "./package/dist/index.js"
-		}
-	},
-	"files": [
-		"package/dist"
+	"packageManager": "npm@10.8.2",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
 	],
 	"scripts": {
-		"dev": "vite --host",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
+		"test": "vitest run",
+		"test:dev": "vitest",
+		"dev": "turbo dev",
+		"check": "turbo check",
+		"build": "turbo build",
+		"preview": "turbo preview",
 		"format": "prettier --write .",
-		"package": "tsup",
-		"pub": "bun i && tsup && npm publish --access public"
+		"changeset": "changeset",
+		"version": "changeset version",
+		"release": "npm run build && changeset publish"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.12",
-		"@types/node": "^20.12.7",
-		"autoprefixer": "^10.4.19",
-		"domco": "^0.5.5",
-		"drab": "^5.4.0",
-		"prettier": "^3.2.5",
-		"prettier-plugin-tailwindcss": "^0.5.14",
-		"robino": "^0.2.0",
-		"tsup": "^8.0.2",
-		"typescript": "^5.4.5",
-		"vite": "^5.2.9"
-	},
-	"dependencies": {
-		"tailwindcss": "^3.4.3"
+		"@changesets/cli": "^2.27.7",
+		"@robino/prettier": "^0.1.1",
+		"@robino/tsconfig": "^0.2.1",
+		"prettier": "^3.3.3",
+		"turbo": "^2.1.0",
+		"typescript": "^5.5.4",
+		"vitest": "^2.0.5"
 	}
 }

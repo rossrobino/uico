@@ -1,0 +1,9 @@
+{
+	"extends": "@robino/tsconfig/bundler.json",
+	"compilerOptions": {
+		"paths": {
+			"@": ["./src"],
+			"@/*": ["./src/*"]
+		}
+	}
+}

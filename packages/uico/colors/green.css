@@ -1,0 +1,13 @@
+:root {
+	--green-50: oklch(0.99 0.02 150);
+	--green-100: oklch(0.96 0.06 150);
+	--green-200: oklch(0.93 0.11 150);
+	--green-300: oklch(0.88 0.16 150);
+	--green-400: oklch(0.83 0.2 150);
+	--green-500: oklch(0.76 0.23 150);
+	--green-600: oklch(0.68 0.21 150);
+	--green-700: oklch(0.59 0.19 150);
+	--green-800: oklch(0.49 0.17 150);
+	--green-900: oklch(0.37 0.15 150);
+	--green-950: oklch(0.23 0.13 150);
+}

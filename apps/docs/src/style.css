@@ -1,0 +1,79 @@
+@import "uico";
+@import "@/components/color/style.css" layer(components);
+@import "@/components/dialog/style.css" layer(components);
+@import "./components/theme/style.css" layer(components);
+
+@layer theme {
+	:root {
+		--shiki-foreground: var(--base-100);
+		--shiki-background: var(--base-900);
+		--shiki-token-constant: var(--base-50);
+		--shiki-token-string: var(--base-300);
+		--shiki-token-comment: var(--base-400);
+		--shiki-token-keyword: var(--base-400);
+		--shiki-token-parameter: var(--base-300);
+		--shiki-token-function: var(--base-300);
+		--shiki-token-string-expression: var(--base-200);
+		--shiki-token-punctuation: var(--base-500);
+		--shiki-token-link: var(--base-300);
+	}
+}
+
+@layer base {
+	body {
+		max-width: 768px;
+		@media (min-width: 1024px) {
+			margin-inline: auto;
+		}
+	}
+
+	* {
+		scroll-padding-block-start: var(--size-10);
+	}
+
+	header {
+		display: flex;
+		position: sticky;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--size-3);
+		z-index: 10;
+		inset-block-start: 0;
+		background-color: var(--background);
+		padding: var(--size-4) var(--size-5);
+
+		@media (min-width: 640px) {
+			padding-inline: var(--size-6);
+		}
+	}
+
+	main,
+	footer {
+		margin: var(--size-5);
+
+		@media (min-width: 640px) {
+			margin-inline: var(--size-6);
+		}
+	}
+}
+
+@layer utilities {
+	.flex-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--size-2);
+	}
+
+	.flex-col {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-4);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: var(--size-4);
+	}
+}

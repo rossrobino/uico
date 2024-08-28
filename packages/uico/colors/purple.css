@@ -1,0 +1,13 @@
+:root {
+	--purple-50: oklch(0.99 0.02 304);
+	--purple-100: oklch(0.92 0.06 304);
+	--purple-200: oklch(0.86 0.11 304);
+	--purple-300: oklch(0.79 0.16 304);
+	--purple-400: oklch(0.71 0.2 304);
+	--purple-500: oklch(0.64 0.23 304);
+	--purple-600: oklch(0.57 0.21 304);
+	--purple-700: oklch(0.49 0.19 304);
+	--purple-800: oklch(0.41 0.17 304);
+	--purple-900: oklch(0.32 0.15 304);
+	--purple-950: oklch(0.24 0.13 304);
+}
