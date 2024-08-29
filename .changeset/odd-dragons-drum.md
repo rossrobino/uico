@@ -2,4 +2,5 @@
 "uico": patch
 ---
 
-increase font-size on `code` elements not in `pre` tags.
+- Increase font-size on `code` elements not in `pre` tags.
+- Add comments throughout src CSS
