@@ -1,5 +1,12 @@
 # uico
 
+## 0.3.1
+
+### Patch Changes
+
+- 87a60f2: - Increase font-size on `code` elements not in `pre` tags.
+  - Add comments throughout src CSS
+
 ## 0.3.0
 
 ### Minor Changes
