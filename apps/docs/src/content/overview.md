@@ -9,7 +9,7 @@ Base styles and color palettes for any web project.
 You can install the package from [npm](https://www.npmjs.com/package/uico),
 
 ```bash
-npm i uico
+npm i -D uico
 ```
 
 ```css

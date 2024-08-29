@@ -7,7 +7,7 @@ Base styles and color palettes for any web project.
 ## Install
 
 ```bash
-npm i uico
+npm i -D uico
 ```
 
 ## CSS (recommended)
