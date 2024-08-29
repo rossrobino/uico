@@ -1,0 +1,17 @@
+@layer base {
+	::-webkit-slider-runnable-track {
+		background: linear-gradient(
+			to right in oklch longer hue,
+			oklch(80% 0.4 0) 0%,
+			oklch(80% 0.4 360) 100%
+		);
+	}
+
+	::-moz-range-track {
+		background: linear-gradient(
+			to right in oklch longer hue,
+			oklch(80% 0.4 0) 0%,
+			oklch(80% 0.4 360) 100%
+		);
+	}
+}

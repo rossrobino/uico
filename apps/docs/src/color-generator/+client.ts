@@ -4,18 +4,15 @@ import { ColorMaker } from "uico";
 class ColorGenerator extends HTMLElement {
 	connectedCallback() {
 		const hue = document.createElement("input");
-		hue.type = "number";
+		hue.type = "range";
 		hue.id = "hue";
 		hue.max = "360";
 		hue.min = "0";
-		hue.step = "2";
-		hue.value = "185";
-		hue.pattern = "[0-9]*";
+		hue.value = "180";
 
 		hue.style.marginBlockEnd = "var(--size-6)";
 
 		const label = document.createElement("label");
-		label.textContent = "hue";
 		label.setAttribute("for", hue.id);
 
 		this.append(label);
@@ -32,6 +29,7 @@ class ColorGenerator extends HTMLElement {
 		const colorMaker = new ColorMaker();
 
 		const createColors = (hue: number) => {
+			label.textContent = `hue (${hue})`;
 			const palettes = colorMaker.getPalettes([
 				{
 					name: "color",
@@ -46,7 +44,7 @@ class ColorGenerator extends HTMLElement {
 			}
 		};
 
-		createColors(185);
+		createColors(180);
 		hue.addEventListener("input", () => {
 			createColors(parseInt(hue.value));
 		});
