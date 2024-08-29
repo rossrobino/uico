@@ -5,12 +5,12 @@
 		--base: oklch(0.55 0.04 257);
 		--accent: oklch(0.46 0.17 185);
 		--destructive: oklch(0.56 0.19 17);
-		
+
 		--light-start: 0.99;
 		--light-end: 0.15;
 		--chroma-start: 0.005;
 		--chroma-end: 0.035;
-		
+
 		--border-radius: 2px;
 
 		--light-avg: calc((var(--light-start) + var(--light-end)) / 2);
@@ -668,14 +668,8 @@
 		background-color: var(--muted-background);
 		padding: 2px var(--size-1);
 		color: var(--heading-foreground);
-		font-size: 0.9em;
+		font-size: 0.95em;
 	}
-
-	/* p code {
-		font-size: var(--font-size-2);
-		line-height: var(--line-height-2);
-		letter-spacing: var(--letter-spacing-2);
-	} */
 
 	h1,
 	h2,
