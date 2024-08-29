@@ -2,20 +2,26 @@
 
 @layer theme {
 	:root {
-		--base: oklch(0.55 0.04 257);
-		--accent: oklch(0.46 0.17 185);
-		--destructive: oklch(0.56 0.19 17);
+		/* these are the recommended props to override to create a theme */
 
+		--base: oklch(0.55 0.04 257);
 		--light-start: 0.99;
 		--light-end: 0.15;
 		--chroma-start: 0.005;
 		--chroma-end: 0.035;
 
+		--accent: oklch(0.46 0.17 185);
+		--destructive: oklch(0.56 0.19 17);
+
 		--border-radius: 2px;
+
+		/* any of the following can also be overridden for further customization */
 
 		--light-avg: calc((var(--light-start) + var(--light-end)) / 2);
 		--chroma-avg: calc((var(--chroma-start) + var(--chroma-end)) / 2);
-		--chroma-med: calc((var(--chroma-avg) + var(--chroma-end)) / 1.5);
+		--chroma-med: calc(
+			(var(--chroma-avg) + var(--chroma-end)) / 1.5
+		); /* between avg and end */
 
 		--base-50: oklch(
 			from var(--base) var(--light-start) var(--chroma-start) h / alpha
@@ -65,7 +71,7 @@
 		);
 		--base-600: oklch(
 			from var(--base)
-				calc(var(--light-avg) - ((var(--light-avg) - var(--light-end)) * 0.28))
+				calc(var(--light-avg) + ((var(--light-end) - var(--light-avg)) * 0.28))
 				calc(
 					var(--chroma-med) + ((var(--chroma-end) - var(--chroma-med)) * 0.29)
 				)
@@ -73,7 +79,7 @@
 		);
 		--base-700: oklch(
 			from var(--base)
-				calc(var(--light-avg) - ((var(--light-avg) - var(--light-end)) * 0.45))
+				calc(var(--light-avg) + ((var(--light-end) - var(--light-avg)) * 0.45))
 				calc(
 					var(--chroma-med) + ((var(--chroma-end) - var(--chroma-med)) * 0.51)
 				)
@@ -81,7 +87,7 @@
 		);
 		--base-800: oklch(
 			from var(--base)
-				calc(var(--light-avg) - ((var(--light-avg) - var(--light-end)) * 0.68))
+				calc(var(--light-avg) + ((var(--light-end) - var(--light-avg)) * 0.68))
 				calc(
 					var(--chroma-med) + ((var(--chroma-end) - var(--chroma-med)) * 0.71)
 				)
@@ -89,7 +95,7 @@
 		);
 		--base-900: oklch(
 			from var(--base)
-				calc(var(--light-avg) - ((var(--light-avg) - var(--light-end)) * 0.83))
+				calc(var(--light-avg) + ((var(--light-end) - var(--light-avg)) * 0.83))
 				calc(
 					var(--chroma-med) + ((var(--chroma-end) - var(--chroma-med)) * 0.86)
 				)
@@ -102,8 +108,10 @@
 		--background: light-dark(var(--base-50), var(--base-950));
 		--foreground: light-dark(var(--base-800), var(--base-300));
 
+		/* slightly darker */
 		--heading-foreground: light-dark(var(--base-900), var(--base-200));
 
+		/* slightly lighter */
 		--muted-background: light-dark(var(--base-100), var(--base-900));
 		--muted-foreground: light-dark(var(--base-700), var(--base-400));
 
@@ -113,6 +121,7 @@
 		--secondary-background: light-dark(var(--base-200), var(--base-700));
 		--secondary-foreground: light-dark(var(--base-950), var(--base-100));
 
+		/* For accent and destructive, dark variants are just 10% darker. */
 		--accent-background: light-dark(
 			var(--accent),
 			oklch(from var(--accent) calc(var(--light-avg) - 0.1) c h / alpha)
@@ -127,6 +136,14 @@
 
 		--border: 1px solid light-dark(var(--base-200), var(--base-700));
 
+		/* Tailwind defaults */
+		--font-family-sans: ui-sans-serif, system-ui, sans-serif,
+			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+			"Noto Color Emoji";
+		--font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+			"Liberation Mono", "Courier New", monospace;
+
+		/* https://www.radix-ui.com/themes/docs/theme/spacing */
 		--size-1: 4px;
 		--size-2: 8px;
 		--size-3: 12px;
@@ -138,12 +155,7 @@
 		--size-9: 64px;
 		--size-10: 96px;
 
-		--font-family-sans: ui-sans-serif, system-ui, sans-serif,
-			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-			"Noto Color Emoji";
-		--font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-			"Liberation Mono", "Courier New", monospace;
-
+		/* https://www.radix-ui.com/themes/docs/theme/typography#type-scale */
 		--font-size-1: 12px;
 		--font-size-2: 14px;
 		--font-size-3: 16px;
@@ -180,7 +192,11 @@
 }
 
 @layer base {
-	/* styles adapted from https://tailwindcss.com/docs/preflight */
+	/* 
+		Styles adapted from: 
+		https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/preflight.css
+		https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css
+	*/
 
 	*,
 	::after,
@@ -205,41 +221,38 @@
 	}
 
 	:-moz-focusring {
-		outline: auto;
+		outline: auto; /* Use the modern Firefox focus style for all focusable elements. */
 	}
 
 	:-moz-ui-invalid {
-		box-shadow: none;
+		box-shadow: none; /* Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737) */
 	}
 
 	::-webkit-inner-spin-button,
 	::-webkit-outer-spin-button {
-		height: auto;
+		height: auto; /* Correct the cursor style of increment and decrement buttons in Safari. */
 	}
 
 	::-webkit-search-decoration {
-		-webkit-appearance: none;
+		-webkit-appearance: none; /* Correct the odd appearance in Chrome and Safari. */
 	}
 
 	html,
 	:host {
+		-webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */
+		-webkit-tap-highlight-color: transparent; /* Disable tap highlights on iOS. */
+		background-color: var(--background);
+		color: var(--foreground);
 		color-scheme: light dark;
-		tab-size: 4;
-		-webkit-text-size-adjust: 100%;
-		-webkit-tap-highlight-color: transparent;
+		font-size: var(--font-size-3);
+		line-height: var(--line-height-3);
 		font-family: var(--font-family-sans);
+		letter-spacing: var(--letter-spacing-3);
+		tab-size: 4;
 
 		@media (prefers-reduced-motion: no-preference) {
 			scroll-behavior: smooth;
 		}
-	}
-
-	body {
-		background-color: var(--background);
-		color: var(--foreground);
-		font-size: var(--font-size-3);
-		line-height: var(--line-height-3);
-		letter-spacing: var(--letter-spacing-3);
 	}
 
 	hr {
@@ -255,13 +268,14 @@
 
 	b,
 	strong {
-		font-weight: bolder;
+		font-weight: bolder; /* Add the correct font weight in Chrome and Safari. */
 	}
 
 	small {
 		font-size: 80%;
 	}
 
+	/* Prevent 'sub' and 'sup' elements from affecting the line height in all browsers. */
 	sub,
 	sup {
 		position: relative;
@@ -279,10 +293,10 @@
 	}
 
 	table {
-		border-color: inherit;
-		border-collapse: collapse;
+		border-color: inherit; /* Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016) */
+		border-collapse: collapse; /* Remove gaps between table borders by default. */
 		width: 100%;
-		text-indent: 0;
+		text-indent: 0; /* Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297) */
 
 		thead {
 			border-block-end: var(--border);
@@ -323,18 +337,17 @@
 	}
 
 	progress {
-		vertical-align: baseline;
+		vertical-align: baseline; /* Add the correct vertical alignment in Chrome and Firefox. */
 	}
 
 	summary {
-		display: list-item;
+		display: list-item; /* Add the correct display in Chrome and Safari. */
 	}
 
+	/* Make lists unstyled by default. */
 	ol,
 	ul,
 	menu {
-		margin: 0;
-		padding: 0;
 		list-style: none;
 	}
 
@@ -346,18 +359,18 @@
 	iframe,
 	embed,
 	object {
-		display: block;
+		display: block; /* Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14) */
 		border-radius: var(--border-radius);
 	}
 
 	img,
 	video {
-		max-width: 100%;
-		height: auto;
+		max-width: 100%; /* Constrain images and videos to the parent width. */
+		height: auto; /* Preserve intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14) */
 	}
 
 	[hidden] {
-		display: none !important;
+		display: none !important; /* Make elements with the HTML hidden attribute stay hidden by default. */
 	}
 
 	button,
@@ -580,7 +593,7 @@
 
 	textarea,
 	select[multiple] {
-		resize: vertical;
+		resize: vertical; /* Prevent resizing textareas horizontally by default. */
 	}
 
 	label,
@@ -668,7 +681,7 @@
 		background-color: var(--muted-background);
 		padding: 2px var(--size-1);
 		color: var(--heading-foreground);
-		font-size: 0.95em;
+		font-size: 0.95em; /* Font looks too big with the background/padding. */
 	}
 
 	h1,
@@ -678,11 +691,11 @@
 	h5,
 	h6 {
 		color: var(--heading-foreground);
-		word-break: break-word;
+		word-break: break-word; /* Prevents long words in heading from increasing the screen width. */
 
 		a {
 			color: var(--heading-foreground);
-			text-decoration: none;
+			text-decoration: none; /* Remove underline from heading links. */
 		}
 	}
 	h1 {
@@ -762,12 +775,13 @@
 			margin-block: var(--size-4) var(--size-1);
 		}
 
-		dt {
-			font-weight: 600;
-		}
-
+		/* Remove top margin if heading is after another heading. */
 		:is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
 			margin-block-start: 0;
+		}
+
+		dt {
+			font-weight: 600;
 		}
 
 		p,
