@@ -52,7 +52,7 @@ Ullamcorper vivamus `malesuada ut finibus` parturient accumsan arcu lacinia cons
 
 > Diam bibendum mus pellentesque cras curabitur facilisi; urna facilisis? Interdum venenatis finibus cubilia nisl pretium. Per nascetur scelerisque lacus rhoncus varius inceptos nullam!
 
-![snowbird image](https://images.unsplash.com/photo-1679330133692-603088131844?q=20&w=2871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<img src="https://images.unsplash.com/photo-1679330133692-603088131844?q=20&w=2871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="snowbird view" loading="lazy">
 
 <table>
 	<thead>
