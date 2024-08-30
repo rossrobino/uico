@@ -28,9 +28,10 @@ app.get("/", async (c) => {
 });
 
 // redirects from previous version
-app.get("/oklch/", (c) => c.redirect("/color-generator", 301));
-app.get("/oklch", (c) => c.redirect("/color-generator", 301));
+app.get("/components/", (c) => c.redirect("/", 301));
 
-app.get("/*", (c) => c.redirect("/", 301));
+app.get("/fonts/", (c) => c.redirect("/", 301));
+
+app.get("/oklch/", (c) => c.redirect("/color-generator", 301));
 
 export default app;
