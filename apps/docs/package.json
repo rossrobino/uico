@@ -11,9 +11,9 @@
 	},
 	"devDependencies": {
 		"@robino/md": "^0.1.1",
-		"domco": "^0.6.2",
+		"domco": "^0.8.0",
 		"drab": "^5.4.2",
-		"hono": "^4.5.9",
+		"hono": "^4.5.11",
 		"uico": "*",
 		"vite": "^5.4.2"
 	}

@@ -9,8 +9,6 @@
 		"apps/*"
 	],
 	"scripts": {
-		"test": "vitest run",
-		"test:dev": "vitest",
 		"dev": "turbo dev",
 		"check": "turbo check",
 		"build": "turbo build",
@@ -26,7 +24,6 @@
 		"@robino/tsconfig": "^0.2.1",
 		"prettier": "^3.3.3",
 		"turbo": "^2.1.0",
-		"typescript": "^5.5.4",
-		"vitest": "^2.0.5"
+		"typescript": "^5.5.4"
 	}
 }
