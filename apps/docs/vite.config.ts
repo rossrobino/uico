@@ -5,7 +5,11 @@ import { defineConfig } from "vite";
 export default defineConfig({
 	plugins: [
 		domco({
-			adapter: adapter(),
+			adapter: adapter({
+				config: {
+					runtime: "edge",
+				},
+			}),
 		}),
 	],
 });

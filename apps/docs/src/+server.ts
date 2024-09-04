@@ -12,10 +12,10 @@ export const prerender: Prerender = true;
 const app = new Hono();
 
 app.get("/", async (c) => {
-	const { html: baseHtml } = await processMarkdown({ md: base });
-	const { html: proseHtml } = await processMarkdown({ md: prose });
-	const { html: overviewHtml } = await processMarkdown({ md: overview });
-	const { html: themeHtml } = await processMarkdown({ md: theme });
+	const { html: baseHtml } = processMarkdown({ md: base });
+	const { html: proseHtml } = processMarkdown({ md: prose });
+	const { html: overviewHtml } = processMarkdown({ md: overview });
+	const { html: themeHtml } = processMarkdown({ md: theme });
 
 	const page = new Injector(c.var.page()).comment([
 		{ text: "prose", children: proseHtml },

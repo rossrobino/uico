@@ -13,9 +13,13 @@ const writeColors = async () => {
 
 	await fs.mkdir(outDir, { recursive: true });
 
+	const promises = [];
+
 	for (const [color, css] of Object.entries(colorMaker.css)) {
-		await fs.writeFile(path.join(outDir, `${color}.css`), css);
+		promises.push(fs.writeFile(path.join(outDir, `${color}.css`), css));
 	}
+
+	await Promise.all(promises);
 };
 
 build();

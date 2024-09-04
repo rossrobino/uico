@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"packageManager": "npm@10.8.2",
+	"packageManager": "npm@10.8.3",
 	"workspaces": [
 		"packages/*",
 		"apps/*"
@@ -11,7 +11,7 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"check": "turbo check",
-		"build": "turbo build",
+		"build": "turbo build && npm run format",
 		"preview": "turbo preview",
 		"format": "prettier --write .",
 		"changeset": "changeset",
@@ -19,11 +19,11 @@
 		"release": "npm run build && changeset publish"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.27.7",
+		"@changesets/cli": "^2.27.8",
 		"@robino/prettier": "^0.1.1",
 		"@robino/tsconfig": "^0.2.1",
 		"prettier": "^3.3.3",
-		"turbo": "^2.1.0",
+		"turbo": "^2.1.1",
 		"typescript": "^5.5.4"
 	}
 }
