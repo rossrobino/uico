@@ -1,5 +1,14 @@
 # uico
 
+## 0.3.2
+
+### Patch Changes
+
+- 521aa6a: A few small changes.
+
+  - Improve prose styles - li and image spacing.
+  - Fix copy color on color generator.
+
 ## 0.3.1
 
 ### Patch Changes
