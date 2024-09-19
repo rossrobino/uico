@@ -10,16 +10,17 @@ import type { Prerender } from "domco";
 import { Injector } from "domco/injector";
 import { Hono } from "hono";
 
-export const prerender: Prerender = ["/"];
+export const prerender: Prerender = ["/", "/color-generator"];
+
+const { html: baseHtml } = processMarkdown({ md: base });
+const { html: proseHtml } = processMarkdown({ md: prose });
+const { html: overviewHtml } = processMarkdown({ md: overview });
+const { html: themeHtml } = processMarkdown({ md: theme });
+const { html: colorMdHtml } = processMarkdown({ md: color });
 
 const app = new Hono();
 
 app.get("/", async (c) => {
-	const { html: baseHtml } = processMarkdown({ md: base });
-	const { html: proseHtml } = processMarkdown({ md: prose });
-	const { html: overviewHtml } = processMarkdown({ md: overview });
-	const { html: themeHtml } = processMarkdown({ md: theme });
-
 	const page = new Injector(html).comment([
 		{ text: "prose", children: proseHtml },
 		{ text: "base", children: baseHtml },
@@ -31,8 +32,6 @@ app.get("/", async (c) => {
 });
 
 app.get("/color-generator", async (c) => {
-	const { html: colorMdHtml } = processMarkdown({ md: color });
-
 	const page = new Injector(colorHtml).comment([
 		{ text: "content", children: colorMdHtml },
 	]);
