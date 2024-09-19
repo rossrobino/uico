@@ -1,4 +1,4 @@
-import "@/components/color";
+import "@/client/components/color";
 import { ColorMaker } from "uico";
 
 class ColorGenerator extends HTMLElement {

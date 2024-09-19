@@ -747,7 +747,7 @@
 @layer utilities {
 	.prose {
 		section {
-			margin-block: var(--size-6);
+			margin-block-end: var(--size-6);
 		}
 
 		h1 {
@@ -789,12 +789,19 @@
 		ol,
 		table,
 		blockquote,
-		pre,
-		hr,
 		dl {
 			&:not(li > &) {
 				margin-block-end: var(--size-4);
 			}
+		}
+
+		hr,
+		pre,
+		img,
+		video,
+		iframe {
+			/* Slightly larger since there's no line height space. */
+			margin-block: var(--size-5);
 		}
 
 		blockquote,
@@ -825,6 +832,7 @@
 		}
 
 		li {
+			margin-block: var(--size-1);
 			padding-inline-start: var(--size-1);
 
 			&::marker {

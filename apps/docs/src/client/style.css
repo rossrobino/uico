@@ -1,7 +1,7 @@
 @import "uico";
-@import "@/components/color/style.css" layer(components);
-@import "@/components/dialog/style.css" layer(components);
-@import "./components/theme/style.css" layer(components);
+@import "@/client/components/color/style.css" layer(components);
+@import "@/client/components/dialog/style.css" layer(components);
+@import "@/client/components/theme/style.css" layer(components);
 
 @layer theme {
 	:root {

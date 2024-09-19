@@ -16,7 +16,7 @@ npm i -D uico
 @import "uico";
 ```
 
-or copy and paste the [stylesheet](https://github.com/rossrobino/uico/tree/main/packages/uico/style.css) into your project (everything is in one file).
+or copy and paste the [stylesheet](https://github.com/rossrobino/uico/tree/main/packages/uico/style.css) into your project (everything is in one CSS file).
 
 ### Layers
 

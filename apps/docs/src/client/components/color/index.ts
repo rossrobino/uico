@@ -4,9 +4,8 @@ import "drab/copy/define";
 class ColorSwatch extends HTMLElement {
 	connectedCallback() {
 		const copy = document.createElement("drab-copy") as Copy;
-		copy.style.display = "contents";
 
-		copy.value = getComputedStyle(this).backgroundColor;
+		copy.style.display = "contents";
 
 		const shade = parseInt(
 			this.style
@@ -24,7 +23,10 @@ class ColorSwatch extends HTMLElement {
 			this.style.colorScheme = "light";
 		}
 
-		button.dataset.trigger = "";
+		button.addEventListener("click", () => {
+			copy.copy(getComputedStyle(this).backgroundColor);
+		});
+
 		button.dataset.content = "";
 		button.ariaLabel = `Copy base color of shade ${shade}`;
 
