@@ -3,20 +3,29 @@ import color from "@/content/color-generator.md?raw";
 import overview from "@/content/overview.md?raw";
 import prose from "@/content/prose.md?raw";
 import theme from "@/content/theme.md?raw";
-import { processMarkdown } from "@robino/md";
+import { MarkdownProcessor } from "@robino/md";
 import { html } from "client:page";
 import { html as colorHtml } from "client:page/color-generator";
 import type { Prerender } from "domco";
 import { Injector } from "domco/injector";
 import { Hono } from "hono";
+import langBash from "shiki/langs/bash.mjs";
+import langCss from "shiki/langs/css.mjs";
+import langJs from "shiki/langs/js.mjs";
 
 export const prerender: Prerender = ["/", "/color-generator"];
 
-const { html: baseHtml } = processMarkdown({ md: base });
-const { html: proseHtml } = processMarkdown({ md: prose });
-const { html: overviewHtml } = processMarkdown({ md: overview });
-const { html: themeHtml } = processMarkdown({ md: theme });
-const { html: colorMdHtml } = processMarkdown({ md: color });
+const markdownProcessor = new MarkdownProcessor({
+	highlighter: {
+		langs: [langBash, langCss, langJs],
+	},
+});
+
+const { html: baseHtml } = markdownProcessor.process(base);
+const { html: proseHtml } = markdownProcessor.process(prose);
+const { html: overviewHtml } = markdownProcessor.process(overview);
+const { html: themeHtml } = markdownProcessor.process(theme);
+const { html: colorMdHtml } = markdownProcessor.process(color);
 
 const app = new Hono();
 
