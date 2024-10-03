@@ -806,7 +806,7 @@
 
 		blockquote,
 		dd {
-			padding-inline-start: var(--size-5);
+			padding-inline: var(--size-5);
 		}
 
 		blockquote {
