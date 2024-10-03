@@ -3,23 +3,14 @@ import color from "@/content/color-generator.md?raw";
 import overview from "@/content/overview.md?raw";
 import prose from "@/content/prose.md?raw";
 import theme from "@/content/theme.md?raw";
-import { MarkdownProcessor } from "@robino/md";
+import { markdownProcessor } from "@/server/md";
 import { html } from "client:page";
 import { html as colorHtml } from "client:page/color-generator";
 import type { Prerender } from "domco";
 import { Injector } from "domco/injector";
 import { Hono } from "hono";
-import langBash from "shiki/langs/bash.mjs";
-import langCss from "shiki/langs/css.mjs";
-import langJs from "shiki/langs/js.mjs";
 
 export const prerender: Prerender = ["/", "/color-generator"];
-
-const markdownProcessor = new MarkdownProcessor({
-	highlighter: {
-		langs: [langBash, langCss, langJs],
-	},
-});
 
 const { html: baseHtml } = markdownProcessor.process(base);
 const { html: proseHtml } = markdownProcessor.process(prose);

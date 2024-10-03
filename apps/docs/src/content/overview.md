@@ -6,7 +6,7 @@ Base styles and color palettes for any web project.
 
 ### Install
 
-You can install the package from [npm](https://www.npmjs.com/package/uico),
+If you are using a bundler, you can install the package from [npm](https://www.npmjs.com/package/uico) and import into your css,
 
 ```bash
 npm i -D uico
@@ -14,6 +14,15 @@ npm i -D uico
 
 ```css
 @import "uico";
+```
+
+or link to a [CDN](https://cdn.jsdelivr.net/npm/uico/style.css) in your html,
+
+```html
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/uico@version/style.css"
+/>
 ```
 
 or copy and paste the [stylesheet](https://github.com/rossrobino/uico/tree/main/packages/uico/style.css) into your project (everything is in one CSS file).
