@@ -21,22 +21,19 @@ const { html: colorMdHtml } = markdownProcessor.process(color);
 const app = new Hono();
 
 app.get("/", async (c) => {
-	const page = new Injector(html).comment([
-		{ text: "prose", children: proseHtml },
-		{ text: "base", children: baseHtml },
-		{ text: "overview", children: overviewHtml },
-		{ text: "theme", children: themeHtml },
-	]);
+	const page = new Injector(html)
+		.comment("prose", proseHtml)
+		.comment("base", baseHtml)
+		.comment("overview", overviewHtml)
+		.comment("theme", themeHtml);
 
-	return c.html(page.html);
+	return c.html(page.toString());
 });
 
 app.get("/color-generator", async (c) => {
-	const page = new Injector(colorHtml).comment([
-		{ text: "content", children: colorMdHtml },
-	]);
+	const page = new Injector(colorHtml).comment("content", colorMdHtml);
 
-	return c.html(page.html);
+	return c.html(page.toString());
 });
 
 // redirects from previous version
