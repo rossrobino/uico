@@ -10,11 +10,10 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@robino/md": "^1.0.1",
-		"domco": "^2.2.1",
+		"@robino/md": "^1.0.3",
+		"domco": "^2.3.0",
 		"drab": "^5.4.2",
-		"hono": "^4.6.15",
 		"uico": "*",
-		"vite": "^6.0.6"
+		"vite": "^6.0.9"
 	}
 }

@@ -6,41 +6,38 @@ import theme from "@/content/theme.md?raw";
 import { markdownProcessor } from "@/server/md";
 import { html } from "client:page";
 import { html as colorHtml } from "client:page/color-generator";
-import type { Prerender } from "domco";
+import type { Handler, Prerender } from "domco";
 import { Injector } from "domco/injector";
-import { Hono } from "hono";
 
 export const prerender: Prerender = ["/", "/color-generator"];
 
-const { html: baseHtml } = markdownProcessor.process(base);
-const { html: proseHtml } = markdownProcessor.process(prose);
-const { html: overviewHtml } = markdownProcessor.process(overview);
-const { html: themeHtml } = markdownProcessor.process(theme);
-const { html: colorMdHtml } = markdownProcessor.process(color);
+export const handler: Handler = (req) => {
+	const { pathname } = new URL(req.url);
 
-const app = new Hono();
+	if (pathname === "/") {
+		const { html: baseHtml } = markdownProcessor.process(base);
+		const { html: proseHtml } = markdownProcessor.process(prose);
+		const { html: overviewHtml } = markdownProcessor.process(overview);
+		const { html: themeHtml } = markdownProcessor.process(theme);
 
-app.get("/", async (c) => {
-	const page = new Injector(html)
-		.comment("prose", proseHtml)
-		.comment("base", baseHtml)
-		.comment("overview", overviewHtml)
-		.comment("theme", themeHtml);
+		const page = new Injector(html)
+			.comment("prose", proseHtml)
+			.comment("base", baseHtml)
+			.comment("overview", overviewHtml)
+			.comment("theme", themeHtml);
 
-	return c.html(page.toString());
-});
+		return new Response(page.toString(), {
+			headers: { "Content-Type": "text/html" },
+		});
+	} else if (pathname === "/color-generator") {
+		const { html: colorMdHtml } = markdownProcessor.process(color);
 
-app.get("/color-generator", async (c) => {
-	const page = new Injector(colorHtml).comment("content", colorMdHtml);
+		const page = new Injector(colorHtml).comment("content", colorMdHtml);
 
-	return c.html(page.toString());
-});
+		return new Response(page.toString(), {
+			headers: { "Content-Type": "text/html" },
+		});
+	}
 
-// redirects from previous version
-app.get("/components/", (c) => c.redirect("/", 301));
-
-app.get("/fonts/", (c) => c.redirect("/", 301));
-
-app.get("/oklch/", (c) => c.redirect("/color-generator", 301));
-
-export const handler = app.fetch;
+	return new Response("Not found", { status: 404 });
+};
