@@ -4,10 +4,10 @@ import overview from "@/content/overview.md?raw";
 import prose from "@/content/prose.md?raw";
 import theme from "@/content/theme.md?raw";
 import { markdownProcessor } from "@/server/md";
+import { Injector } from "@robino/html";
 import { html } from "client:page";
 import { html as colorHtml } from "client:page/color-generator";
 import type { Handler, Prerender } from "domco";
-import { Injector } from "domco/injector";
 
 export const prerender: Prerender = ["/", "/color-generator"];
 
