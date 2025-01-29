@@ -1,5 +1,15 @@
 # uico
 
+## 0.4.0
+
+### Minor Changes
+
+- 8f90f1a: Minor updates
+
+  - Update focus ring to 1px
+  - Improve base styles
+  - Improve placeholder colors
+
 ## 0.3.3
 
 ### Patch Changes
