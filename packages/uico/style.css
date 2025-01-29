@@ -194,7 +194,7 @@
 @layer base {
 	/* 
 		Styles adapted from: 
-		https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/preflight.css
+		https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css
 		https://github.com/sindresorhus/modern-normalize/blob/main/modern-normalize.css
 	*/
 
@@ -211,8 +211,8 @@
 	}
 
 	*:focus-visible {
-		outline: var(--primary-background) solid 2px;
-		outline-offset: 2px;
+		outline: var(--primary-background) solid 1px;
+		outline-offset: 1px;
 	}
 
 	::selection {
@@ -369,7 +369,7 @@
 		height: auto; /* Preserve intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14) */
 	}
 
-	[hidden] {
+	[hidden]:where(:not([hidden="until-found"])) {
 		display: none !important; /* Make elements with the HTML hidden attribute stay hidden by default. */
 	}
 
@@ -464,8 +464,8 @@
 		}
 
 		&::placeholder {
-			opacity: 0.7;
-			color: inherit;
+			opacity: 1;
+			color: color-mix(in oklch, currentColor 50%, transparent);
 		}
 
 		&:disabled {

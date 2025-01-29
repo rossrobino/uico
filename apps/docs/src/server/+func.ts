@@ -32,7 +32,7 @@ export const handler: Handler = (req) => {
 	} else if (pathname === "/color-generator") {
 		const { html: colorMdHtml } = markdownProcessor.process(color);
 
-		const page = new Injector(colorHtml).comment("content", colorMdHtml);
+		const page = new Injector(colorHtml).main(colorMdHtml, "prepend");
 
 		return new Response(page.toString(), {
 			headers: { "Content-Type": "text/html" },
