@@ -1,5 +1,11 @@
 # uico
 
+## 0.4.4
+
+### Patch Changes
+
+- d663929: tailwind example file
+
 ## 0.4.3
 
 ### Patch Changes
