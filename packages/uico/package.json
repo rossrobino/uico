@@ -23,6 +23,7 @@
 		"README.md",
 		"LICENSE.md",
 		"*.css",
+		"!tailwind.css",
 		"dist"
 	],
 	"scripts": {
