@@ -1,5 +1,11 @@
 # uico
 
+## 0.4.2
+
+### Patch Changes
+
+- a0ea237: fix: conflicting styles for button, submit, and reset input types
+
 ## 0.4.1
 
 ### Patch Changes
