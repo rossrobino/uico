@@ -1,5 +1,11 @@
 # uico
 
+## 0.4.3
+
+### Patch Changes
+
+- 1f635da: fix: consistent layer order, lighter light-start value
+
 ## 0.4.2
 
 ### Patch Changes
