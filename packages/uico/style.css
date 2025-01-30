@@ -437,7 +437,7 @@
 		}
 	}
 
-	input,
+	input:where(:not([type="button"], [type="reset"], [type="submit"])),
 	select,
 	textarea,
 	.input {
