@@ -28,5 +28,3 @@ uico uses [css layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) 
 
 - `theme` - css custom properties
 - `base` - base styles and components
-- `components` - empty
-- `utilities` - utility classes

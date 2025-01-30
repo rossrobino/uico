@@ -1,5 +1,3 @@
-@layer theme, base, components, utilities;
-
 @layer theme {
 	:root {
 		/* these are the recommended props to override to create a theme */
@@ -699,6 +697,7 @@
 			text-decoration: none; /* Remove underline from heading links. */
 		}
 	}
+
 	h1 {
 		font-size: var(--font-size-9);
 		line-height: var(--line-height-9);
@@ -743,9 +742,7 @@
 		line-height: var(--line-height-4);
 		letter-spacing: var(--letter-spacing-4);
 	}
-}
 
-@layer utilities {
 	.prose {
 		section {
 			margin-block-end: var(--size-6);

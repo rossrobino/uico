@@ -1,7 +1,6 @@
 import base from "@/content/base.md?raw";
 import color from "@/content/color-generator.md?raw";
 import overview from "@/content/overview.md?raw";
-import prose from "@/content/prose.md?raw";
 import theme from "@/content/theme.md?raw";
 import { markdownProcessor } from "@/server/md";
 import { Injector } from "@robino/html";
@@ -15,16 +14,14 @@ export const handler: Handler = (req) => {
 	const { pathname } = new URL(req.url);
 
 	if (pathname === "/") {
-		const { html: baseHtml } = markdownProcessor.process(base);
-		const { html: proseHtml } = markdownProcessor.process(prose);
 		const { html: overviewHtml } = markdownProcessor.process(overview);
 		const { html: themeHtml } = markdownProcessor.process(theme);
+		const { html: baseHtml } = markdownProcessor.process(base);
 
 		const page = new Injector(html)
-			.comment("prose", proseHtml)
-			.comment("base", baseHtml)
 			.comment("overview", overviewHtml)
-			.comment("theme", themeHtml);
+			.comment("theme", themeHtml)
+			.comment("base", baseHtml);
 
 		return new Response(page.toString(), {
 			headers: { "Content-Type": "text/html" },
