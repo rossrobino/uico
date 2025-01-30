@@ -1,5 +1,11 @@
 # uico
 
+## 0.4.6
+
+### Patch Changes
+
+- 57a64a0: fix: inherit font on inputs, .link underline
+
 ## 0.4.5
 
 ### Patch Changes
