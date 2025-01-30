@@ -446,6 +446,7 @@
 		height: var(--size-7);
 		color: var(--foreground);
 		accent-color: var(--accent-background);
+		font: inherit;
 		font-size: var(--font-size-3);
 		line-height: var(--line-height-3);
 		letter-spacing: var(--letter-spacing-3);
@@ -656,6 +657,7 @@
 	.link {
 		cursor: pointer;
 		color: var(--primary-background);
+		text-decoration: underline; /* needed for class */
 		text-underline-offset: 2px;
 	}
 
