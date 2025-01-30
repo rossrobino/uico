@@ -1,5 +1,11 @@
 # uico
 
+## 0.4.1
+
+### Patch Changes
+
+- ac0fc45: fix: only hover button styles on supported devices
+
 ## 0.4.0
 
 ### Minor Changes
