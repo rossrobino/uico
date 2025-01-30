@@ -16,16 +16,86 @@ npm i -D uico
 @import "uico";
 ```
 
-or link to a [CDN](https://cdn.jsdelivr.net/npm/uico/style.css) in your html,
-
-```html
-<link
-	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/uico@version/style.css"
-/>
-```
-
 or copy and paste the [stylesheet](https://github.com/rossrobino/uico/tree/main/packages/uico/style.css) into your project (everything is in one CSS file).
+
+#### TailwindCSS
+
+Tailwind is not required to use uico. If you are using uico with [TailwindCSS](https://tailwindcss.com/), this configuration configures the custom colors and deduplicates other values. Tailwind `preflight` is not needed.
+
+```css
+@layer theme, base, components, utilities;
+
+@import "uico";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+	--color-*: initial;
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-heading-foreground: var(--heading-foreground);
+	--color-base-50: var(--base-50);
+	--color-base-100: var(--base-100);
+	--color-base-200: var(--base-200);
+	--color-base-300: var(--base-300);
+	--color-base-400: var(--base-400);
+	--color-base-500: var(--base-500);
+	--color-base-600: var(--base-600);
+	--color-base-700: var(--base-700);
+	--color-base-800: var(--base-800);
+	--color-base-900: var(--base-900);
+	--color-base-950: var(--base-950);
+	--color-muted-background: var(--muted-background);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-primary-background: var(--primary-background);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary-background: var(--secondary-background);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-accent-background: var(--accent-background);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-secondary-background: var(--secondary-background);
+	--color-destructive-foreground: var(--secondary-foreground);
+
+	--font-sans: var(--font-family-sans);
+	--font-mono: var(--font-family-mono);
+
+	--text-xs: var(--font-size-1);
+	--text-xs--line-height: var(--line-height-1);
+	--text-xs--letter-spacing: var(--letter-spacing-1);
+	--text-sm: var(--font-size-2);
+	--text-sm--line-height: var(--line-height-2);
+	--text-base: var(--font-size-3);
+	--text-base--line-height: ar(--line-height-3);
+	--text-lg: var(--font-size-4);
+	--text-lg--line-height: var(--line-height-4);
+	--text-xl: var(--font-size-5);
+	--text-xl--line-height: var(--line-height-5);
+	--text-2xl: var(--font-size-6);
+	--text-2xl--line-height: var(--line-height-6);
+	--text-3xl: var(--font-size-7);
+	--text-3xl--line-height: var(--line-height-6);
+	--text-4xl: var(--font-size-8);
+	--text-4xl--line-height: var(--line-height-9);
+	--text-5xl: var(--font-size-9);
+	--text-5xl--line-height: var(--line-height-10);
+	--text-6xl: var(--font-size-10);
+
+	--radius-xs: calc(var(--border-radius) / 3);
+	--radius-sm: calc(var(--border-radius) / 1.5);
+	--radius-md: var(--border-radius);
+	--radius-lg: calc(var(--border-radius) * 1.33);
+	--radius-xl: calc(var(--border-radius) * 2);
+	--radius-2xl: calc(var(--border-radius) * 2.66);
+	--radius-3xl: calc(var(--border-radius) * 4);
+	--radius-4xl: calc(var(--border-radius) * 5.33);
+}
+
+@layer theme {
+	:root {
+		/* uico theme values */
+	}
+}
+```
 
 ### Layers
 
@@ -33,5 +103,5 @@ uico uses [css layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) 
 
 - `theme` - css custom properties
 - `base` - base styles and components
-- `utilities` - utility classes
 - `components` - empty
+- `utilities` - utility classes

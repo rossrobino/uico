@@ -1,11 +1,11 @@
-@layer theme, base, utilities, components;
+@layer theme, base, components, utilities;
 
 @layer theme {
 	:root {
 		/* these are the recommended props to override to create a theme */
 
 		--base: oklch(0.55 0.04 257);
-		--light-start: 0.99;
+		--light-start: 0.995;
 		--light-end: 0.15;
 		--chroma-start: 0.005;
 		--chroma-end: 0.035;
