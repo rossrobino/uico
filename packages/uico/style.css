@@ -390,10 +390,6 @@
 		letter-spacing: var(--letter-spacing-2);
 		text-decoration: none;
 
-		&:hover {
-			opacity: 90%;
-		}
-
 		&:disabled {
 			opacity: 50%;
 			pointer-events: none;
@@ -417,22 +413,27 @@
 		&.ghost {
 			background-color: transparent;
 			color: var(--foreground);
-			&:hover {
-				background-color: var(--muted-background);
-			}
 		}
 
 		&.outline {
 			border: var(--border);
 			background-color: var(--background);
 			color: var(--foreground);
-			&:hover {
-				background-color: var(--muted-background);
-			}
 		}
 
 		&.icon {
 			padding: var(--size-2);
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				opacity: 90%;
+			}
+
+			&.ghost:hover,
+			&.outline:hover {
+				background-color: var(--muted-background);
+			}
 		}
 	}
 
