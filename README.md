@@ -22,3 +22,7 @@ npm i -D uico
 ```js
 import "uico/style.css";
 ```
+
+## TailwindCSS
+
+[Configuration reference](https://github.com/rossrobino/uico/blob/main/packages/uico/tailwind.css)
