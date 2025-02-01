@@ -28,8 +28,8 @@
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-accent-background: var(--accent-background);
 	--color-accent-foreground: var(--accent-foreground);
-	--color-secondary-background: var(--secondary-background);
-	--color-destructive-foreground: var(--secondary-foreground);
+	--color-destructive-background: var(--destructive-background);
+	--color-destructive-foreground: var(--destructive-foreground);
 
 	--font-sans: var(--font-family-sans);
 	--font-mono: var(--font-family-mono);
