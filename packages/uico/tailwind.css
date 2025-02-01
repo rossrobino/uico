@@ -20,15 +20,15 @@
 	--color-base-800: var(--base-800);
 	--color-base-900: var(--base-900);
 	--color-base-950: var(--base-950);
-	--color-muted-background: var(--muted-background);
+	--color-muted: var(--muted-background);
 	--color-muted-foreground: var(--muted-foreground);
-	--color-primary-background: var(--primary-background);
+	--color-primary: var(--primary-background);
 	--color-primary-foreground: var(--primary-foreground);
-	--color-secondary-background: var(--secondary-background);
+	--color-secondary: var(--secondary-background);
 	--color-secondary-foreground: var(--secondary-foreground);
-	--color-accent-background: var(--accent-background);
+	--color-accent: var(--accent-background);
 	--color-accent-foreground: var(--accent-foreground);
-	--color-destructive-background: var(--destructive-background);
+	--color-destructive: var(--destructive-background);
 	--color-destructive-foreground: var(--destructive-foreground);
 
 	--font-sans: var(--font-family-sans);
