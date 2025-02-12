@@ -36,6 +36,8 @@ export const handler: Handler = (req) => {
 		});
 	} else if (url.pathname === "/oklch") {
 		url.pathname = "/color-generator";
+		url.search = "";
+
 		return Response.redirect(url, 301);
 	}
 
