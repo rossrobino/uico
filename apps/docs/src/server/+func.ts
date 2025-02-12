@@ -11,9 +11,9 @@ import type { Handler, Prerender } from "domco";
 export const prerender: Prerender = ["/", "/color-generator"];
 
 export const handler: Handler = (req) => {
-	const { pathname } = new URL(req.url);
+	const url = new URL(req.url);
 
-	if (pathname === "/") {
+	if (url.pathname === "/") {
 		const { html: overviewHtml } = markdownProcessor.process(overview);
 		const { html: themeHtml } = markdownProcessor.process(theme);
 		const { html: baseHtml } = markdownProcessor.process(base);
@@ -26,7 +26,7 @@ export const handler: Handler = (req) => {
 		return new Response(page.toString(), {
 			headers: { "Content-Type": "text/html" },
 		});
-	} else if (pathname === "/color-generator") {
+	} else if (url.pathname === "/color-generator") {
 		const { html: colorMdHtml } = markdownProcessor.process(color);
 
 		const page = new Injector(colorHtml).main(colorMdHtml, "prepend");
@@ -34,6 +34,9 @@ export const handler: Handler = (req) => {
 		return new Response(page.toString(), {
 			headers: { "Content-Type": "text/html" },
 		});
+	} else if (url.pathname === "/oklch") {
+		url.pathname = "/color-generator";
+		return Response.redirect(url, 301);
 	}
 
 	return new Response("Not found", { status: 404 });
