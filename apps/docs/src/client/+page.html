@@ -11,11 +11,7 @@
 	</head>
 	<body>
 		<header>
-			<drab-dialog
-				click-outside-close
-				animation-keyframe-from-transform="translateX(100%)"
-				animation-keyframe-to-transform="translateX(0)"
-			>
+			<drab-dialog click-outside-close>
 				<h2><a href="#">uico</a></h2>
 
 				<button data-trigger type="button" class="ghost" title="Edit Theme">
@@ -118,10 +114,10 @@
 
 		<main class="prose">
 			<section>
-				<!-- overview -->
+				<section-overview></section-overview>
 			</section>
 			<section>
-				<!-- theme -->
+				<section-theme></section-theme>
 				<div>
 					<theme-edit>
 						<button class="secondary">Edit Theme</button>
@@ -165,7 +161,7 @@
 				</color-palette>
 			</section>
 			<section>
-				<!-- base -->
+				<section-base></section-base>
 			</section>
 		</main>
 		<footer class="prose">

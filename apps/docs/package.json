@@ -10,12 +10,15 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@domcojs/vercel": "^1.0.0",
-		"@robino/html": "^0.1.0",
-		"@robino/md": "^1.0.3",
-		"domco": "^3.0.1",
-		"drab": "^5.4.2",
-		"uico": "*",
-		"vite": "^6.0.11"
+		"@domcojs/vercel": "^1.0.2",
+		"domco": "^3.0.2",
+		"vite": "^6.2.0"
+	},
+	"dependencies": {
+		"@robino/html": "^0.6.1",
+		"@robino/md": "^3.0.0",
+		"@robino/router": "^0.1.2",
+		"drab": "^6.1.0",
+		"uico": "*"
 	}
 }
