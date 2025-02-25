@@ -9,6 +9,7 @@ export default defineConfig({
 				config: {
 					runtime: "edge",
 				},
+				trailingSlash: false,
 			}),
 		}),
 	],
