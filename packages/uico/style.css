@@ -675,6 +675,9 @@
 		padding: var(--size-4);
 		overflow-x: auto;
 		color: light-dark(var(--base-100), var(--base-200));
+		font-size: var(--font-size-2);
+		line-height: var(--line-height-2);
+		letter-spacing: var(--letter-spacing-2);
 	}
 
 	code:not(pre code) {
@@ -682,7 +685,9 @@
 		background-color: var(--muted-background);
 		padding: 2px var(--size-1);
 		color: var(--heading-foreground);
-		font-size: 0.95em; /* Font looks too big with the background/padding. */
+		font-size: var(--font-size-2);
+		line-height: var(--line-height-2);
+		letter-spacing: var(--letter-spacing-2);
 	}
 
 	h1,
