@@ -1,5 +1,11 @@
 # uico
 
+## 0.6.1
+
+### Patch Changes
+
+- d2d2cc1: fix for a tags too
+
 ## 0.6.0
 
 ### Minor Changes
