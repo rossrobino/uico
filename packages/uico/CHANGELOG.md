@@ -1,5 +1,11 @@
 # uico
 
+## 0.5.0
+
+### Minor Changes
+
+- f118fd7: reduce font size for code blocks
+
 ## 0.4.6
 
 ### Patch Changes
