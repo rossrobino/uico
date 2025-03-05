@@ -1,5 +1,11 @@
 # uico
 
+## 0.6.0
+
+### Minor Changes
+
+- 1c8f480: remove cursor pointer from button
+
 ## 0.5.0
 
 ### Minor Changes
