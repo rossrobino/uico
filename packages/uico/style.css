@@ -676,8 +676,8 @@
 		overflow-x: auto;
 		color: light-dark(var(--base-100), var(--base-200));
 		font-size: var(--font-size-2);
-		line-height: var(--line-height-2);
-		letter-spacing: var(--letter-spacing-2);
+		line-height: var(--line-height-3);
+		letter-spacing: var(--letter-spacing-1);
 	}
 
 	code:not(pre code) {
@@ -686,8 +686,8 @@
 		padding: 2px var(--size-1);
 		color: var(--heading-foreground);
 		font-size: var(--font-size-2);
-		line-height: var(--line-height-2);
-		letter-spacing: var(--letter-spacing-2);
+		line-height: var(--line-height-3);
+		letter-spacing: var(--letter-spacing-1);
 	}
 
 	h1,
