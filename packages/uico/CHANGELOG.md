@@ -1,5 +1,11 @@
 # uico
 
+## 0.6.2
+
+### Patch Changes
+
+- 24f584e: fix line height for code blocks
+
 ## 0.6.1
 
 ### Patch Changes
