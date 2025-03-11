@@ -135,11 +135,12 @@
 		--border: 1px solid light-dark(var(--base-200), var(--base-700));
 
 		/* Tailwind defaults */
-		--font-family-sans: ui-sans-serif, system-ui, sans-serif,
-			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-			"Noto Color Emoji";
-		--font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-			"Liberation Mono", "Courier New", monospace;
+		--font-family-sans:
+			ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+			"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		--font-family-mono:
+			ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+			"Courier New", monospace;
 
 		/* https://www.radix-ui.com/themes/docs/theme/spacing */
 		--size-1: 4px;
@@ -573,12 +574,9 @@
 		}
 
 		&:not([multiple]) {
-			/* copied from daisyUI - https://github.com/saadeghi/daisyui/blob/master/src/components/styled/select.css */
-			background-image: linear-gradient(
-					45deg,
-					transparent 50%,
-					currentColor 50%
-				),
+			/* copied from daisyUI - https://github.com/saadeghi/daisyui/blob/master/packages/daisyui/src/components/select.css */
+			background-image:
+				linear-gradient(45deg, transparent 50%, currentColor 50%),
 				linear-gradient(135deg, currentColor 50%, transparent 50%);
 			background-position:
 				calc(100% - 20px) calc(1px + 50%),
@@ -593,6 +591,8 @@
 
 	textarea,
 	select[multiple] {
+		height: var(--size-10);
+		min-height: var(--size-7);
 		resize: vertical; /* Prevent resizing textareas horizontally by default. */
 	}
 
