@@ -1,5 +1,11 @@
 # uico
 
+## 0.6.3
+
+### Patch Changes
+
+- 319eb24: textarea / select[multiple] min height and height
+
 ## 0.6.2
 
 ### Patch Changes
