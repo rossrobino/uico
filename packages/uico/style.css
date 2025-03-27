@@ -215,8 +215,8 @@
 	}
 
 	::selection {
-		background-color: var(--accent-background);
-		color: var(--accent-foreground);
+		background-color: var(--primary-background);
+		color: var(--primary-foreground);
 	}
 
 	:-moz-focusring {
@@ -458,6 +458,10 @@
 			padding: var(--size-2) var(--size-3);
 		}
 
+		&[multiple] {
+			padding: var(--size-2);
+		}
+
 		&:not([type="checkbox"], [type="radio"]) {
 			appearance: none;
 			-webkit-appearance: none;
@@ -465,7 +469,6 @@
 		}
 
 		&::placeholder {
-			opacity: 1;
 			color: color-mix(in oklch, currentColor 50%, transparent);
 		}
 
@@ -476,10 +479,8 @@
 
 		&[type="checkbox"],
 		&[type="radio"] {
-			margin-block: var(--size-1);
-			aspect-ratio: 1;
-			width: var(--size-5);
-			height: var(--size-4);
+			width: 17px; /* safari cuts off at 16 */
+			height: 17px;
 		}
 
 		&[type="color"] {
@@ -560,16 +561,25 @@
 	}
 
 	select {
-		&[multiple] {
-			option {
-				margin-block-end: var(--size-1);
-				border-radius: var(--border-radius);
-				padding: var(--size-1);
+		option {
+			display: flex;
+			align-items: center;
+			border-radius: var(--border-radius);
+			padding-inline: var(--size-2);
+			padding-block: var(--size-1);
+			height: var(--size-6);
 
-				&:checked {
-					background-color: var(--muted-foreground);
-					color: var(--background);
-				}
+			&:not(:last-child) {
+				margin-block-end: var(--size-1);
+			}
+
+			&:hover {
+				background-color: var(--muted-background);
+			}
+
+			&:checked {
+				background-color: var(--muted-foreground);
+				color: var(--background);
 			}
 		}
 

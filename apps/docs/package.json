@@ -12,11 +12,12 @@
 	"devDependencies": {
 		"@domcojs/vercel": "^1.1.1",
 		"domco": "^3.0.2",
-		"vite": "^6.2.1"
+		"vite": "^6.2.3"
 	},
 	"dependencies": {
-		"@robino/md": "^3.2.0",
-		"@robino/router": "^0.6.1",
+		"@robino/jsx": "^0.3.0",
+		"@robino/md": "^3.2.1",
+		"@robino/router": "^0.11.1",
 		"drab": "^6.1.0",
 		"uico": "*"
 	}

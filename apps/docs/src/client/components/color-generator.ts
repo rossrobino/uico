@@ -1,7 +1,6 @@
-import "@/client/components/color";
 import { ColorMaker } from "uico";
 
-class ColorGenerator extends HTMLElement {
+export class ColorGenerator extends HTMLElement {
 	connectedCallback() {
 		const hue = document.createElement("input");
 		hue.type = "range";
@@ -45,10 +44,9 @@ class ColorGenerator extends HTMLElement {
 		};
 
 		createColors(180);
+
 		hue.addEventListener("input", () => {
 			createColors(parseInt(hue.value));
 		});
 	}
 }
-
-customElements.define("color-generator", ColorGenerator);

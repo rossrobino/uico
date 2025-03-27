@@ -1,6 +1,6 @@
 import type { Dialog } from "drab/dialog";
 
-class ThemePicker extends HTMLElement {
+export class Picker extends HTMLElement {
 	connectedCallback() {
 		const prop = this.getAttribute("prop")!;
 		const value = this.getAttribute("value")!;
@@ -48,7 +48,7 @@ class ThemePicker extends HTMLElement {
 	}
 }
 
-class ThemeEdit extends HTMLElement {
+export class Edit extends HTMLElement {
 	connectedCallback() {
 		const button = this.querySelector("button")!;
 		const toggle = () => {
@@ -58,6 +58,3 @@ class ThemeEdit extends HTMLElement {
 		button.addEventListener("click", toggle);
 	}
 }
-
-customElements.define("theme-picker", ThemePicker);
-customElements.define("theme-edit", ThemeEdit);

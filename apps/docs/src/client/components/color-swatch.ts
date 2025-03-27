@@ -1,7 +1,7 @@
 import type { Copy } from "drab/copy";
 import "drab/copy/define";
 
-class ColorSwatch extends HTMLElement {
+export class ColorSwatch extends HTMLElement {
 	connectedCallback() {
 		const copy = document.createElement("drab-copy") as Copy;
 
@@ -75,5 +75,3 @@ class ColorSwatch extends HTMLElement {
 		this.append(copy);
 	}
 }
-
-customElements.define("color-swatch", ColorSwatch);

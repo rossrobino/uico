@@ -41,7 +41,6 @@ Here’s a link to the project’s [GitHub repository](https://github.com/rossro
 	<span class="badge">Primary</span>
 	<span class="badge secondary">Secondary</span>
 	<span class="badge accent">Accent</span>
-	<span class="badge secondary">Secondary</span>
 	<span class="badge destructive">Destructive</span>
 	<span class="badge ghost">Ghost</span>
 	<span class="badge outline">Outline</span>
