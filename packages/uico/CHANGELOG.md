@@ -1,5 +1,15 @@
 # uico
 
+## 0.7.0
+
+### Minor Changes
+
+- e21fd43: Minor changes
+
+  - update selection color from accent to primary
+  - refine styles on `select[multiple]`
+  - refine styles on checkbox and radio inputs
+
 ## 0.6.3
 
 ### Patch Changes
