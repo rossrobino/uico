@@ -1,16 +1,15 @@
 import { ColorGenerator } from "@/pages/color-generator";
 import { Home } from "@/pages/home";
-import { Router } from "@robino/router";
 import { html } from "client:page";
-import type { Handler, Prerender } from "domco";
+import { Router } from "ovr";
 
-export const prerender: Prerender = ["/", "/color-generator"];
-
-const router = new Router({
+const app = new Router({
 	start(c) {
 		c.base = html;
 	},
 });
+
+app.prerender = ["/", "/color-generator"];
 
 const Head = (props: { title: string; description: string }) => {
 	return (
@@ -21,14 +20,14 @@ const Head = (props: { title: string; description: string }) => {
 	);
 };
 
-router.get("/", (c) => {
+app.get("/", (c) => {
 	c.head(
 		<Head title="uico" description="Comprehensive Styles with Modern CSS" />,
 	);
 	c.page(Home);
 });
 
-router.get("/color-generator", (c) => {
+app.get("/color-generator", (c) => {
 	c.head(
 		<Head
 			title="OKLCH Color Generator"
@@ -38,10 +37,10 @@ router.get("/color-generator", (c) => {
 	c.page(ColorGenerator);
 });
 
-router.get("/oklch", (c) => {
+app.get("/oklch", (c) => {
 	c.url.pathname = "/color-generator";
 	c.url.search = "";
 	c.redirect(c.req.url, 301);
 });
 
-export const handler: Handler = router.fetch;
+export default app;
