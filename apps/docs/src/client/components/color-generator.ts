@@ -29,12 +29,7 @@ export class ColorGenerator extends HTMLElement {
 
 		const createColors = (hue: number) => {
 			label.textContent = `hue (${hue})`;
-			const palettes = colorMaker.getPalettes([
-				{
-					name: "color",
-					hue,
-				},
-			]);
+			const palettes = colorMaker.getPalettes([{ name: "color", hue }]);
 
 			const palette = palettes["color"]!;
 

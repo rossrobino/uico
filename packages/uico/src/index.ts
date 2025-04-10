@@ -1,7 +1,4 @@
-type ColorInfo = {
-	name: string;
-	hue: number;
-};
+type ColorInfo = { name: string; hue: number };
 
 export class ColorMaker {
 	/**
@@ -13,75 +10,23 @@ export class ColorMaker {
 	 * Starting values for the colors to be built from.
 	 */
 	colorInfo: ColorInfo[] = [
-		{
-			name: "red",
-			hue: 25,
-		},
-		{
-			name: "orange",
-			hue: 55,
-		},
-		{
-			name: "amber",
-			hue: 78,
-		},
-		{
-			name: "yellow",
-			hue: 98,
-		},
-
-		{
-			name: "lime",
-			hue: 127,
-		},
-		{
-			name: "green",
-			hue: 150,
-		},
-		{
-			name: "emerald",
-			hue: 169,
-		},
-		{
-			name: "teal",
-			hue: 185,
-		},
-		{
-			name: "cyan",
-			hue: 205,
-		},
-		{
-			name: "sky",
-			hue: 225,
-		},
-		{
-			name: "blue",
-			hue: 260,
-		},
-		{
-			name: "indigo",
-			hue: 275,
-		},
-		{
-			name: "violet",
-			hue: 293,
-		},
-		{
-			name: "purple",
-			hue: 304,
-		},
-		{
-			name: "fuchsia",
-			hue: 322,
-		},
-		{
-			name: "pink",
-			hue: 354,
-		},
-		{
-			name: "rose",
-			hue: 17,
-		},
+		{ name: "red", hue: 25 },
+		{ name: "orange", hue: 55 },
+		{ name: "amber", hue: 78 },
+		{ name: "yellow", hue: 98 },
+		{ name: "lime", hue: 127 },
+		{ name: "green", hue: 150 },
+		{ name: "emerald", hue: 169 },
+		{ name: "teal", hue: 185 },
+		{ name: "cyan", hue: 205 },
+		{ name: "sky", hue: 225 },
+		{ name: "blue", hue: 260 },
+		{ name: "indigo", hue: 275 },
+		{ name: "violet", hue: 293 },
+		{ name: "purple", hue: 304 },
+		{ name: "fuchsia", hue: 322 },
+		{ name: "pink", hue: 354 },
+		{ name: "rose", hue: 17 },
 	];
 
 	/**
