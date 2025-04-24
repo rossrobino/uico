@@ -1,0 +1,5 @@
+---
+"uico": minor
+---
+
+scrollbar color

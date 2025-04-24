@@ -206,6 +206,8 @@
 		margin: 0;
 		border: 0 solid;
 		padding: 0;
+		scrollbar-color: light-dark(var(--base-300), var(--base-700))
+			var(--muted-background);
 		caret-color: var(--foreground);
 	}
 
