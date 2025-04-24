@@ -1,5 +1,11 @@
 # uico
 
+## 0.9.0
+
+### Minor Changes
+
+- 57fc20f: scrollbar color
+
 ## 0.8.0
 
 ### Minor Changes
