@@ -1,5 +1,21 @@
 # uico
 
+## 0.8.0
+
+### Minor Changes
+
+- 223e1af: default theme changes
+
+  - --light-end default to 0.1 (a bit darker)
+  - --accent default to cyan-700
+
+- a6d0ec3: remove cursor style from button
+
+### Patch Changes
+
+- 9266a18: fix: remove margin from non-prose headings
+- 63aa6ad: fix: code style within headings
+
 ## 0.7.0
 
 ### Minor Changes
