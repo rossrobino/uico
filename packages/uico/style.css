@@ -387,6 +387,7 @@
 		color: var(--primary-foreground);
 		font-size: var(--font-size-2);
 		line-height: var(--line-height-2);
+		font-family: inherit;
 		letter-spacing: var(--letter-spacing-2);
 		text-decoration: none;
 
@@ -448,9 +449,9 @@
 		height: var(--size-7);
 		color: var(--foreground);
 		accent-color: var(--accent-background);
-		font: inherit;
 		font-size: var(--font-size-3);
 		line-height: var(--line-height-3);
+		font-family: inherit;
 		letter-spacing: var(--letter-spacing-3);
 
 		&:not([switch]) {
