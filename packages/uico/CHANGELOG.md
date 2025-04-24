@@ -1,5 +1,11 @@
 # uico
 
+## 0.10.1
+
+### Patch Changes
+
+- d3a0fa2: fix icon button padding
+
 ## 0.10.0
 
 ### Minor Changes
