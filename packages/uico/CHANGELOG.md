@@ -1,5 +1,11 @@
 # uico
 
+## 0.9.1
+
+### Patch Changes
+
+- 5507644: fix: buttons font family inherit
+
 ## 0.9.0
 
 ### Minor Changes
