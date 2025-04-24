@@ -1,5 +1,11 @@
 # uico
 
+## 0.10.0
+
+### Minor Changes
+
+- a5b0f37: button height
+
 ## 0.9.1
 
 ### Patch Changes
