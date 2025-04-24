@@ -4,11 +4,11 @@
 
 		--base: oklch(0.55 0.04 257);
 		--light-start: 0.995;
-		--light-end: 0.15;
+		--light-end: 0.1;
 		--chroma-start: 0.005;
 		--chroma-end: 0.035;
 
-		--accent: oklch(0.46 0.17 185);
+		--accent: oklch(0.52 0.1 223);
 		--destructive: oklch(0.56 0.19 17);
 
 		--border-radius: 2px;

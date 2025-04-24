@@ -62,12 +62,12 @@ export const Home = () => {
 									<theme-picker
 										prop="accent"
 										type="color"
-										value="#00695f"
+										value="#2A7392"
 									></theme-picker>
 									<theme-picker
 										prop="destructive"
 										type="color"
-										value="#cb304a"
+										value="#CB304A"
 									></theme-picker>
 								</div>
 
@@ -80,7 +80,7 @@ export const Home = () => {
 									<theme-picker
 										prop="light-end"
 										type="number"
-										value="0.15"
+										value="0.1"
 									></theme-picker>
 								</div>
 
