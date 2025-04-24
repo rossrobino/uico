@@ -29,6 +29,10 @@ Base styles are added to the elements in your application. There are also classe
 		<button class="outline">Outline</button>
 		<button class="outline" disabled>Disabled</button>
 	</div>
+	<div class="flex-row">
+		<button class="icon">i</button>
+		<button class="icon" disabled>i</button>
+	</div>
 </div>
 
 ### a, .link
