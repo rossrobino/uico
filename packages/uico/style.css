@@ -379,7 +379,6 @@
 		justify-content: center;
 		align-items: center;
 		appearance: button;
-		cursor: default;
 		border-radius: var(--border-radius);
 		background-color: var(--primary-background);
 		padding: var(--size-2) var(--size-3);
