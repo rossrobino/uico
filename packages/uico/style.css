@@ -740,14 +740,12 @@
 	}
 
 	h4 {
-		margin-block: var(--size-6) var(--size-3);
 		font-size: var(--font-size-6);
 		line-height: var(--line-height-6);
 		letter-spacing: var(--letter-spacing-6);
 	}
 
 	h5 {
-		margin-block: var(--size-5) var(--size-2);
 		font-size: var(--font-size-5);
 		line-height: var(--line-height-5);
 		letter-spacing: var(--letter-spacing-5);
