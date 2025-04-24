@@ -424,6 +424,7 @@
 		}
 
 		&.icon {
+			padding: var(--size-2);
 			width: var(--size-7);
 		}
 
