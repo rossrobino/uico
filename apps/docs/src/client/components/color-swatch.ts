@@ -1,11 +1,11 @@
-import type { Copy } from "drab/copy";
-import "drab/copy/define";
+import type { Share } from "drab/share";
+import "drab/share/define";
 
 export class ColorSwatch extends HTMLElement {
 	connectedCallback() {
-		const copy = document.createElement("drab-copy") as Copy;
+		const share = document.createElement("drab-share") as Share;
 
-		copy.style.display = "contents";
+		share.style.display = "contents";
 
 		const shade = parseInt(
 			this.style
@@ -24,9 +24,10 @@ export class ColorSwatch extends HTMLElement {
 		}
 
 		button.addEventListener("click", () => {
-			copy.copy(getComputedStyle(this).backgroundColor);
+			share.setAttribute("text", getComputedStyle(this).backgroundColor);
 		});
 
+		button.dataset.trigger = "";
 		button.dataset.content = "";
 		button.ariaLabel = `Copy base color of shade ${shade}`;
 
@@ -70,8 +71,8 @@ export class ColorSwatch extends HTMLElement {
 			</svg>
 		`;
 
-		copy.append(button);
-		copy.append(swap);
-		this.append(copy);
+		share.append(button);
+		share.append(swap);
+		this.append(share);
 	}
 }

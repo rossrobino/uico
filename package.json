@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"packageManager": "npm@10.9.2",
+	"packageManager": "npm@11.3.0",
 	"workspaces": [
 		"packages/*",
 		"apps/*"
@@ -23,7 +23,7 @@
 		"@robino/prettier": "^2.0.0",
 		"@robino/tsconfig": "^1.0.3",
 		"prettier": "^3.5.3",
-		"turbo": "^2.5.1",
+		"turbo": "^2.5.2",
 		"typescript": "^5.8.3"
 	}
 }
