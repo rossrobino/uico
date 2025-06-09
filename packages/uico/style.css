@@ -688,6 +688,7 @@
 		background-color: var(--base-900);
 		padding: var(--size-4);
 		overflow-x: auto;
+		scrollbar-color: var(--base-700) var(--base-900);
 		color: light-dark(var(--base-100), var(--base-200));
 		font-size: var(--font-size-2);
 		line-height: var(--line-height-3);

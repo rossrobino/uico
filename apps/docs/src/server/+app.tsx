@@ -1,13 +1,11 @@
 import { ColorGenerator } from "@/pages/color-generator";
 import { Home } from "@/pages/home";
 import { html } from "client:page";
-import { Router } from "ovr";
+import { App } from "ovr";
 
-const app = new Router({
-	start(c) {
-		c.base = html;
-	},
-});
+const app = new App();
+
+app.base = html;
 
 app.prerender = ["/", "/color-generator"];
 

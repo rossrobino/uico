@@ -19,11 +19,11 @@
 		"release": "npm run build && changeset publish"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.29.2",
+		"@changesets/cli": "^2.29.4",
 		"@robino/prettier": "^2.0.0",
-		"@robino/tsconfig": "^1.0.3",
+		"@robino/tsconfig": "^1.0.4",
 		"prettier": "^3.5.3",
-		"turbo": "^2.5.2",
+		"turbo": "^2.5.4",
 		"typescript": "^5.8.3"
 	}
 }
