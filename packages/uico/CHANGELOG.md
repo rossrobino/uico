@@ -1,5 +1,11 @@
 # uico
 
+## 0.10.2
+
+### Patch Changes
+
+- 4c1ceab: pre scrollbar color
+
 ## 0.10.1
 
 ### Patch Changes
