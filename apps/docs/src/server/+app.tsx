@@ -1,5 +1,5 @@
-import { ColorGenerator } from "@/pages/color-generator";
-import { Home } from "@/pages/home";
+import * as color from "@/pages/color-generator";
+import * as home from "@/pages/home";
 import { html } from "client:page";
 import { App } from "ovr";
 
@@ -7,38 +7,14 @@ const app = new App();
 
 app.base = html;
 
-app.prerender = ["/", "/color-generator"];
-
-const Head = (props: { title: string; description: string }) => {
-	return (
-		<>
-			<title>{props.title}</title>
-			<meta name="description" content={props.description} />
-		</>
-	);
-};
-
-app.get("/", (c) => {
-	c.head(
-		<Head title="uico" description="Comprehensive Styles with Modern CSS" />,
-	);
-	c.page(Home);
-});
-
-app.get("/color-generator", (c) => {
-	c.head(
-		<Head
-			title="OKLCH Color Generator"
-			description="Generate OKLCH color palettes by inputting a hue."
-		/>,
-	);
-	c.page(ColorGenerator);
-});
+app.prerender = [home.page.pattern, color.page.pattern];
 
 app.get("/oklch", (c) => {
-	c.url.pathname = "/color-generator";
+	c.url.pathname = color.page.pattern;
 	c.url.search = "";
 	c.redirect(c.req.url, 301);
 });
+
+app.add(home, color);
 
 export default app;

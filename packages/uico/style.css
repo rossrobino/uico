@@ -830,7 +830,9 @@
 		}
 
 		p,
-		li {
+		li,
+		blockquote,
+		dd {
 			text-wrap: pretty;
 		}
 

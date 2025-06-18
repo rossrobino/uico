@@ -24,7 +24,8 @@
 		"LICENSE.md",
 		"*.css",
 		"!tailwind.css",
-		"dist"
+		"dist",
+		"src"
 	],
 	"scripts": {
 		"check": "tsc --noEmit",

@@ -2,8 +2,14 @@ import { html as baseHtml } from "@/content/base.md";
 import { html as overviewHtml } from "@/content/overview.md";
 import { html as themeHtml } from "@/content/theme.md";
 import { Footer } from "@/ui/footer";
+import { Head } from "@/ui/head";
+import { Chunk, Page } from "ovr";
 
-export const Home = () => {
+export const page = new Page("/", (c) => {
+	c.head(
+		<Head title="uico" description="Comprehensive Styles with Modern CSS" />,
+	);
+
 	return (
 		<>
 			<header>
@@ -111,9 +117,9 @@ export const Home = () => {
 			</header>
 
 			<main class="prose">
-				<section>{overviewHtml}</section>
+				<section>{new Chunk(overviewHtml, true)}</section>
 				<section>
-					{themeHtml}
+					{new Chunk(themeHtml, true)}
 					<div>
 						<theme-edit>
 							<button class="secondary">Edit Theme</button>
@@ -138,9 +144,9 @@ export const Home = () => {
 						<color-swatch style="background-color: var(--base-950)"></color-swatch>
 					</color-palette>
 				</section>
-				<section>{baseHtml}</section>
+				<section>{new Chunk(baseHtml, true)}</section>
 			</main>
 			<Footer />
 		</>
 	);
-};
+});
