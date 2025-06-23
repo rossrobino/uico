@@ -17,7 +17,7 @@
 	"dependencies": {
 		"@robino/md": "^4.0.2",
 		"drab": "^7.0.2",
-		"ovr": "^3.0.1",
+		"ovr": "^4.1.0",
 		"uico": "*"
 	}
 }

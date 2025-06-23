@@ -3,9 +3,9 @@ import { html as overviewHtml } from "@/content/overview.md";
 import { html as themeHtml } from "@/content/theme.md";
 import { Footer } from "@/ui/footer";
 import { Head } from "@/ui/head";
-import { Chunk, Page } from "ovr";
+import { Chunk, Get } from "ovr";
 
-export const page = new Page("/", (c) => {
+export const page = new Get("/", (c) => {
 	c.head(
 		<Head title="uico" description="Comprehensive Styles with Modern CSS" />,
 	);
@@ -18,7 +18,12 @@ export const page = new Page("/", (c) => {
 						<a href="#">uico</a>
 					</h2>
 
-					<button data-trigger type="button" class="ghost" title="Edit Theme">
+					<button
+						data-trigger
+						type="button"
+						class="ghost icon"
+						title="Edit Theme"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"

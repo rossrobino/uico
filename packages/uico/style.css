@@ -374,6 +374,10 @@
 		display: none !important; /* Make elements with the HTML hidden attribute stay hidden by default. */
 	}
 
+	button:not([type="reset"], [type="button"]) {
+		cursor: pointer;
+	}
+
 	button,
 	input:where([type="button"], [type="reset"], [type="submit"]),
 	.button {
@@ -478,7 +482,7 @@
 
 		&:disabled {
 			opacity: 0.5;
-			cursor: "not-allowed";
+			cursor: not-allowed;
 		}
 
 		&[type="checkbox"],
@@ -517,7 +521,6 @@
 		&[type="range"] {
 			-webkit-appearance: none;
 			appearance: none;
-			cursor: pointer;
 			border: none;
 			background: transparent;
 			padding-inline: 0;
@@ -624,8 +627,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: default;
 		border-radius: var(--border-radius);
-
 		background-color: var(--primary-background);
 		padding: var(--size-1) var(--size-2);
 		height: var(--size-5);

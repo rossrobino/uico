@@ -16,6 +16,7 @@ export class ColorSwatch extends HTMLElement {
 		);
 
 		const button = document.createElement("button");
+		button.type = "button";
 
 		if (shade > 400) {
 			this.style.colorScheme = "dark";
@@ -31,7 +32,7 @@ export class ColorSwatch extends HTMLElement {
 		button.dataset.content = "";
 		button.ariaLabel = `Copy base color of shade ${shade}`;
 
-		button.classList.add("ghost");
+		button.classList.add("ghost", "icon");
 
 		button.innerHTML = `
 			<svg

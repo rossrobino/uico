@@ -1,9 +1,9 @@
 import { html } from "@/content/color-generator.md";
 import { Footer } from "@/ui/footer";
 import { Head } from "@/ui/head";
-import { Chunk, Page } from "ovr";
+import { Chunk, Get } from "ovr";
 
-export const page = new Page("/color-generator", (c) => {
+export const page = new Get("/color-generator", (c) => {
 	c.head(
 		<Head
 			title="OKLCH Color Generator"
