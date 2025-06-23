@@ -9,9 +9,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [
-		domco({
-			adapter: adapter({ config: { runtime: "edge" }, trailingSlash: false }),
-		}),
+		domco({ adapter: adapter({ trailingSlash: false }) }),
 		md({ highlighter: { langs: [langBash, langCss, langJs, langHtml] } }),
 	],
 });
