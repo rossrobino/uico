@@ -1,9 +1,8 @@
 {
 	"name": "uico-monorepo",
 	"private": true,
-	"version": "0.0.0",
 	"type": "module",
-	"packageManager": "npm@11.4.2",
+	"packageManager": "npm@11.7.0",
 	"workspaces": [
 		"packages/*",
 		"apps/*"
@@ -11,19 +10,19 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"check": "turbo check",
-		"build": "turbo build && npm run format",
+		"build": "turbo build",
 		"preview": "turbo preview",
-		"format": "prettier --write .",
+		"format": "turbo format",
 		"changeset": "changeset",
 		"version": "changeset version",
-		"release": "npm run build && changeset publish"
+		"release": "turbo build && changeset publish"
 	},
 	"devDependencies": {
-		"@changesets/cli": "^2.29.5",
-		"@robino/prettier": "^2.0.2",
-		"@robino/tsconfig": "^1.1.0",
-		"prettier": "^3.6.0",
-		"turbo": "^2.5.4",
-		"typescript": "^5.8.3"
+		"@changesets/cli": "^2.29.8",
+		"@robino/prettier": "^2.0.3",
+		"@robino/tsconfig": "^1.1.1",
+		"prettier": "^3.7.4",
+		"turbo": "^2.6.3",
+		"typescript": "^5.9.3"
 	}
 }

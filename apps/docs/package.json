@@ -7,7 +7,8 @@
 		"dev": "vite --host",
 		"check": "tsc",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@domcojs/vercel": "^2.0.2",

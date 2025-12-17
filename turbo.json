@@ -4,6 +4,7 @@
 		"check": { "dependsOn": ["^check"] },
 		"dev": { "cache": false, "persistent": true },
 		"build": { "dependsOn": ["^build"], "outputs": ["dist/**"] },
-		"preview": { "dependsOn": ["^build"], "cache": false, "persistent": true }
+		"preview": { "cache": false, "persistent": true, "dependsOn": ["^build"] },
+		"format": {}
 	}
 }

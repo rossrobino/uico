@@ -179,6 +179,7 @@
   - <button class="button button-secondary">Open</button>
   + <button class="secondary">Open</button>
   ```
+
   - `.card` component is removed.
   - Adds `ghost` variant for `.badge` class.
   - A variety of custom properties are included to use or override.
