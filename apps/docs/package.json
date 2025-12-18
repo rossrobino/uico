@@ -4,21 +4,21 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"dev": "vite --host",
+		"dev": "vite",
 		"check": "tsc",
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@domcojs/vercel": "^2.0.2",
-		"domco": "^4.1.4",
-		"vite": "^6.3.5"
+		"@domcojs/vercel": "^3.1.2",
+		"domco": "^5.0.0",
+		"vite": "^7.3.0"
 	},
 	"dependencies": {
-		"@robino/md": "^4.0.2",
-		"drab": "^7.0.2",
-		"ovr": "^4.1.0",
+		"@robino/md": "^5.0.0",
+		"drab": "^7.0.3",
+		"ovr": "^6.1.0",
 		"uico": "*"
 	}
 }

@@ -1,17 +1,18 @@
 import { html as baseHtml } from "@/content/base.md";
 import { html as overviewHtml } from "@/content/overview.md";
 import { html as themeHtml } from "@/content/theme.md";
+import { Layout } from "@/pages/layout";
 import { Footer } from "@/ui/footer";
 import { Head } from "@/ui/head";
-import { Chunk, Get } from "ovr";
+import { Render, Route } from "ovr";
 
-export const page = new Get("/", (c) => {
-	c.head(
-		<Head title="uico" description="Comprehensive Styles with Modern CSS" />,
-	);
-
+export const page = Route.get("/", () => {
 	return (
-		<>
+		<Layout
+			head={
+				<Head title="uico" description="Comprehensive Styles with Modern CSS" />
+			}
+		>
 			<header>
 				<drab-dialog click-outside-close>
 					<h2>
@@ -122,9 +123,9 @@ export const page = new Get("/", (c) => {
 			</header>
 
 			<main class="prose">
-				<section>{new Chunk(overviewHtml, true)}</section>
+				<section>{Render.html(overviewHtml)}</section>
 				<section>
-					{new Chunk(themeHtml, true)}
+					{Render.html(themeHtml)}
 					<div>
 						<theme-edit>
 							<button class="secondary">Edit Theme</button>
@@ -149,9 +150,9 @@ export const page = new Get("/", (c) => {
 						<color-swatch style="background-color: var(--base-950)"></color-swatch>
 					</color-palette>
 				</section>
-				<section>{new Chunk(baseHtml, true)}</section>
+				<section>{Render.html(baseHtml)}</section>
 			</main>
 			<Footer />
-		</>
+		</Layout>
 	);
 });
