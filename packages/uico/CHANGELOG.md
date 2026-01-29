@@ -1,5 +1,11 @@
 # uico
 
+## 0.12.0
+
+### Minor Changes
+
+- 0bd1087: feat: add input autocomplete styles
+
 ## 0.11.0
 
 ### Minor Changes
