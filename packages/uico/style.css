@@ -444,6 +444,23 @@
 		}
 	}
 
+	fieldset {
+		*:has(> label[for]):has(> input[id]) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			& > label[for] {
+				padding-inline-end: var(--size-2);
+			}
+
+			& > input[id] + label[for] {
+				padding-inline-start: var(--size-2);
+				padding-inline-end: 0;
+			}
+		}
+	}
+
 	input:where(:not([type="button"], [type="reset"], [type="submit"])),
 	select,
 	textarea,
@@ -489,6 +506,10 @@
 		&[type="radio"] {
 			width: 17px; /* safari cuts off at 16 */
 			height: 17px;
+
+			&[switch] {
+				width: var(--size-7);
+			}
 		}
 
 		&[type="color"] {
@@ -614,6 +635,7 @@
 	}
 
 	label,
+	legend,
 	.label {
 		display: inline-block;
 		margin-block: var(--size-1);
@@ -621,6 +643,12 @@
 		font-size: var(--font-size-2);
 		line-height: var(--line-height-2);
 		letter-spacing: var(--letter-spacing-2);
+	}
+
+	legend {
+		font-size: var(--font-size-3);
+		line-height: var(--line-height-3);
+		letter-spacing: var(--letter-spacing-3);
 	}
 
 	.badge {

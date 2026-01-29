@@ -111,30 +111,43 @@ Here’s a link to the project’s [GitHub repository](https://github.com/rossro
 		<label for="colorInput" class="label">Color</label>
 		<input type="color" id="colorInput" />
 	</div>
-	<div>
-		<div class="flex-row">
+	<fieldset>
+		<legend>Select all that apply</legend>
+		<div>
 			<input type="checkbox" id="checkbox" />
-			<label for="checkbox" class="label">Checkbox</label>
+			<label for="checkbox" class="label">Checkbox 1</label>
 		</div>
-		<div class="flex-row">
+		<div>
+			<input type="checkbox" id="checkbox-2" />
+			<label for="checkbox-2" class="label">Checkbox 2</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Switch (Safari)</legend>
+		<div>
 			<input type="checkbox" id="switch" switch />
-			<label for="switch" class="label">Switch (safari)</label>
+			<label for="switch" class="label">Switch 1</label>
 		</div>
-	</div>
-	<div>
-		<div class="flex-row">
+		<div>
+			<input type="checkbox" id="switch-2" switch />
+			<label for="switch-2" class="label">Switch 2</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Choose one</legend>
+		<div>
 			<input type="radio" id="radio1" name="radio" />
 			<label for="radio1" class="label">Radio 1</label>
 		</div>
-		<div class="flex-row">
+		<div>
 			<input type="radio" id="radio2" name="radio" />
 			<label for="radio2" class="label">Radio 2</label>
 		</div>
-		<div class="flex-row">
+		<div>
 			<input type="radio" id="radio3" name="radio" />
 			<label for="radio3" class="label">Radio 3</label>
 		</div>
-	</div>
+	</fieldset>
 	<div>
 		<label for="range" class="label">Range</label>
 		<input type="range" id="range" />
