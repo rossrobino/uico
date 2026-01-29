@@ -52,64 +52,70 @@ Here’s a link to the project’s [GitHub repository](https://github.com/rossro
 
 ### input, .input
 
-<div class="grid">
+<form class="grid" autocomplete="on">
 	<div>
-		<label for="textInput" class="label">Text</label>
-		<input type="text" id="textInput" placeholder="Placeholder" />
+		<label for="text-input" class="label">Text</label>
+		<input
+			type="text"
+			id="text-input"
+			name="name"
+			autocomplete="name"
+			placeholder="Placeholder"
+		/>
 	</div>
 	<div>
-		<label for="passwordInput" class="label">Password</label>
-		<input type="password" id="passwordInput" />
+		<label for="password-input" class="label">Password</label>
+		<input type="password" id="password-input" />
 	</div>
 	<div>
-		<label for="emailInput" class="label">Email</label>
-		<input type="email" id="emailInput" />
+		<label for="email-input" class="label">Email</label>
+		<input type="email" id="email-input" />
 	</div>
 	<div>
-		<label for="urlInput" class="label">URL</label>
-		<input type="url" id="urlInput" />
+		<label for="url-input" class="label">URL</label>
+		<input type="url" id="url-input" />
 	</div>
 	<div>
-		<label for="searchInput" class="label">Search</label>
-		<input type="search" id="searchInput" />
+		<label for="search-input" class="label">Search</label>
+		<input type="search" id="search-input" />
 	</div>
 	<div>
-		<label for="fileInput" class="label">File</label>
-		<input type="file" id="fileInput" />
+		<label for="file-input" class="label">File</label>
+		<input type="file" id="file-input" />
 	</div>
 	<div>
-		<label for="dateInput" class="label">Date</label>
-		<input type="date" id="dateInput" />
+		<label for="date-input" class="label">Date</label>
+		<input type="date" id="date-input" />
 	</div>
 	<div>
-		<label for="datetime-localInput" class="label">
+		<label for="datetime-local-input" class="label">
 			Date Time - Local
 		</label>
-		<input type="datetime-local" id="datetime-localInput" />
+		<input type="datetime-local" id="datetime-local-input" />
 	</div>
 	<div>
-		<label for="monthInput" class="label">Month</label>
-		<input type="month" id="monthInput" />
+		<label for="month-input" class="label">Month</label>
+		<input type="month" id="month-input" />
 	</div>
 	<div>
-		<label for="weekInput" class="label">Week</label>
-		<input type="week" id="weekInput" />
+		<label for="week-input" class="label">Week</label>
+		<input type="week" id="week-input" />
 	</div>
 	<div>
-		<label for="timeInput" class="label">Time</label>
-		<input type="time" id="timeInput" />
+		<label for="time-input" class="label">Time</label>
+		<input type="time" id="time-input" />
 	</div>
 	<div>
-		<label for="numberInput" class="label">Number</label>
-		<input type="number" id="numberInput" />
+		<label for="number-input" class="label">Number</label>
+		<input type="number" id="number-input" />
 	</div>
 	<div>
-		<label for="telInput" class="label">Tel</label>
-		<input type="tel" id="telInput" />
+		<label for="tel-input" class="label">Tel</label>
+		<input type="tel" id="tel-input" />
 	</div>
 	<div>
-		<label for="colorInput" class="label">Color</label>
-		<input type="color" id="colorInput" />
+		<label for="color-input" class="label">Color</label>
+		<input type="color" id="color-input" />
 	</div>
 	<fieldset>
 		<legend>Select all that apply</legend>
@@ -136,16 +142,16 @@ Here’s a link to the project’s [GitHub repository](https://github.com/rossro
 	<fieldset>
 		<legend>Choose one</legend>
 		<div>
-			<input type="radio" id="radio1" name="radio" />
-			<label for="radio1" class="label">Radio 1</label>
+			<input type="radio" id="radio-1" name="radio" />
+			<label for="radio-1" class="label">Radio 1</label>
 		</div>
 		<div>
-			<input type="radio" id="radio2" name="radio" />
-			<label for="radio2" class="label">Radio 2</label>
+			<input type="radio" id="radio-2" name="radio" />
+			<label for="radio-2" class="label">Radio 2</label>
 		</div>
 		<div>
-			<input type="radio" id="radio3" name="radio" />
-			<label for="radio3" class="label">Radio 3</label>
+			<input type="radio" id="radio-3" name="radio" />
+			<label for="radio-3" class="label">Radio 3</label>
 		</div>
 	</fieldset>
 	<div>
@@ -165,14 +171,14 @@ Here’s a link to the project’s [GitHub repository](https://github.com/rossro
 		</select>
 	</div>
 	<div>
-		<label for="selectMultiple" class="label">Select Multiple</label>
-		<select id="selectMultiple" multiple>
+		<label for="select-multiple" class="label">Select Multiple</label>
+		<select id="select-multiple" multiple>
 			<option value="option1">Option 1</option>
 			<option value="option2">Option 2</option>
 			<option value="option3">Option 3</option>
 		</select>
 	</div>
-</div>
+</form>
 
 ### .prose
 

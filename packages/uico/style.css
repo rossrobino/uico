@@ -502,6 +502,15 @@
 			cursor: not-allowed;
 		}
 
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			-webkit-box-shadow: 0 0 0 1000px
+				light-dark(var(--base-100), var(--base-900)) inset;
+			box-shadow: 0 0 0 1000px light-dark(var(--base-100), var(--base-900))
+				inset;
+		}
+
 		&[type="checkbox"],
 		&[type="radio"] {
 			width: 17px; /* safari cuts off at 16 */
