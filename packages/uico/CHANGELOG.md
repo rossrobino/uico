@@ -1,5 +1,16 @@
 # uico
 
+## 0.11.0
+
+### Minor Changes
+
+- 8a3bfb0: feat: adds base styles for input groups and legends within a `<fieldset>` element to style checkboxes and radios without extra styles.
+  - Adds padding either before or after the label to space it apart from the input while still being selectable between the elements
+
+### Patch Changes
+
+- 8a3bfb0: fix: fixes small input[switch] width for Safari switches
+
 ## 0.10.3
 
 ### Patch Changes
