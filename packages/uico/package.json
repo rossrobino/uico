@@ -28,11 +28,14 @@
 		"src"
 	],
 	"scripts": {
-		"check": "tsc --noEmit",
-		"dev": "tsc --watch",
-		"build:js": "tsc",
+		"check": "tsc",
+		"dev": "tsc --watch -p tsconfig.build.json",
+		"build:js": "tsc -p tsconfig.build.json",
 		"build:css": "node dist/build",
 		"build": "npm run build:js && npm run build:css",
 		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@types/node": "^25.5.0"
 	}
 }
